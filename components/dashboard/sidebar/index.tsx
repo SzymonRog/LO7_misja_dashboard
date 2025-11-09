@@ -34,6 +34,8 @@ import { Bullet } from "@/components/ui/bullet";
 import LockIcon from "@/components/icons/lock";
 import Image from "next/image";
 import { useIsV0 } from "@/lib/v0-context";
+import DashboardCard from "@/components/dashboard/card";
+import {Card, CardContent} from "@/components/ui/card";
 
 // This is sample data for the sidebar
 const data = {
@@ -42,32 +44,26 @@ const data = {
       title: "Tools",
       items: [
         {
-          title: "Overview",
+          title: "Dahboard",
           url: "/",
           icon: BracketsIcon,
           isActive: true,
         },
         {
-          title: "Laboratory",
-          url: "/laboratory",
+          title: "Dane",
+          url: "/data",
           icon: AtomIcon,
           isActive: false,
         },
         {
-          title: "Devices",
-          url: "/devices",
-          icon: ProcessorIcon,
-          isActive: false,
-        },
-        {
-          title: "Security",
-          url: "/security",
+          title: "Zabezpieczenia",
+          url: "/zabezpieczenia",
           icon: CuteRobotIcon,
           isActive: false,
         },
         {
-          title: "Communication",
-          url: "/communication",
+          title: "Poczta",
+          url: "/poczta",
           icon: EmailIcon,
           isActive: false,
         },
@@ -174,8 +170,7 @@ export function DashboardSidebar({
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <Popover>
-                  <PopoverTrigger className="flex gap-0.5 w-full group cursor-pointer">
+                  <CardContent className="flex gap-0.5 w-full group cursor-pointer">
                     <div className="shrink-0 flex size-14 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground overflow-clip">
                       <Image
                         src={data.user.avatar}
@@ -193,27 +188,9 @@ export function DashboardSidebar({
                           {data.user.email}
                         </span>
                       </div>
-                      <DotsVerticalIcon className="ml-auto size-4" />
+
                     </div>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    className="w-56 p-0"
-                    side="bottom"
-                    align="end"
-                    sideOffset={4}
-                  >
-                    <div className="flex flex-col">
-                      <button className="flex items-center px-4 py-2 text-sm hover:bg-accent">
-                        <MonkeyIcon className="mr-2 h-4 w-4" />
-                        Account
-                      </button>
-                      <button className="flex items-center px-4 py-2 text-sm hover:bg-accent">
-                        <GearIcon className="mr-2 h-4 w-4" />
-                        Settings
-                      </button>
-                    </div>
-                  </PopoverContent>
-                </Popover>
+                  </CardContent>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
