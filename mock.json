@@ -1,0 +1,431 @@
+{
+  "dashboardStats": [
+    {
+      "label": "INGERENCJA W WYBORY",
+      "value": "12",
+      "description": "SFAŁSZOWANE KAMPANIE",
+      "intent": "negative",
+      "icon": "gear",
+      "direction": "up"
+    },
+    {
+      "label": "WYGRANE PRZETARGI",
+      "value": "47",
+      "description": "OSZUKAŃCZE OFERTY",
+      "intent": "negative",
+      "icon": "proccesor",
+      "direction": "up"
+    },
+    {
+      "label": "OPERACJE AI",
+      "value": "283",
+      "description": "AKTYWNE KAMPANIE DEZINFORMACJI",
+      "intent": "neutral",
+      "icon": "boom",
+      "tag": "Ostatnie 30 dni"
+    }
+  ],
+  "chartData": {
+    "week": [
+      {
+        "date": "01/11",
+        "illegalProfit": 180000,
+        "bribes": 25000,
+        "tenderOverpay": 145000,
+        "label": "Pon"
+      },
+      {
+        "date": "02/11",
+        "illegalProfit": 420000,
+        "bribes": 50000,
+        "tenderOverpay": 227500,
+        "label": "Wt"
+      },
+      {
+        "date": "03/11",
+        "illegalProfit": 95000,
+        "bribes": 0,
+        "tenderOverpay": 43200,
+        "label": "Śr"
+      },
+      {
+        "date": "04/11",
+        "illegalProfit": 310000,
+        "bribes": 35000,
+        "tenderOverpay": 108800,
+        "label": "Czw"
+      },
+      {
+        "date": "05/11",
+        "illegalProfit": 520000,
+        "bribes": 85000,
+        "tenderOverpay": 380000,
+        "label": "Pt"
+      },
+      {
+        "date": "06/11",
+        "illegalProfit": 240000,
+        "bribes": 15000,
+        "tenderOverpay": 138200,
+        "label": "Sob"
+      },
+      {
+        "date": "07/11",
+        "illegalProfit": 0,
+        "bribes": 0,
+        "tenderOverpay": 0,
+        "label": "Ndz",
+        "note": "SYSTEM SHUTDOWN"
+      }
+    ],
+    "month": [
+      {
+        "date": "Sty",
+        "illegalProfit": 820000,
+        "bribes": 120000,
+        "tenderOverpay": 580000,
+        "euFunds": 0
+      },
+      {
+        "date": "Lut",
+        "illegalProfit": 650000,
+        "bribes": 85000,
+        "tenderOverpay": 420000,
+        "euFunds": 0
+      },
+      {
+        "date": "Mar",
+        "illegalProfit": 1250000,
+        "bribes": 180000,
+        "tenderOverpay": 890000,
+        "euFunds": 0
+      },
+      {
+        "date": "Kwi",
+        "illegalProfit": 480000,
+        "bribes": 45000,
+        "tenderOverpay": 320000,
+        "euFunds": 0
+      },
+      {
+        "date": "Maj",
+        "illegalProfit": 920000,
+        "bribes": 110000,
+        "tenderOverpay": 650000,
+        "euFunds": 0
+      },
+      {
+        "date": "Cze",
+        "illegalProfit": 780000,
+        "bribes": 95000,
+        "tenderOverpay": 540000,
+        "euFunds": 0
+      },
+      {
+        "date": "Lip",
+        "illegalProfit": 1100000,
+        "bribes": 140000,
+        "tenderOverpay": 750000,
+        "euFunds": 0
+      },
+      {
+        "date": "Sie",
+        "illegalProfit": 950000,
+        "bribes": 120000,
+        "tenderOverpay": 680000,
+        "euFunds": 0
+      },
+      {
+        "date": "Wrz",
+        "illegalProfit": 1580000,
+        "bribes": 185000,
+        "tenderOverpay": 1200000,
+        "euFunds": 750000,
+        "note": "Pierwszy grant EU przejęty"
+      },
+      {
+        "date": "Paź",
+        "illegalProfit": 1820000,
+        "bribes": 220000,
+        "tenderOverpay": 1350000,
+        "euFunds": 1200000,
+        "note": "SmartVote+ deployment"
+      },
+      {
+        "date": "Lis",
+        "illegalProfit": 2450000,
+        "bribes": 285000,
+        "tenderOverpay": 1680000,
+        "euFunds": 15000000,
+        "note": "TechPark 2.0 (15M EUR) - PEAK"
+      },
+      {
+        "date": "Gru",
+        "illegalProfit": 0,
+        "bribes": 0,
+        "tenderOverpay": 0,
+        "euFunds": 0,
+        "note": "SYSTEM TERMINATED"
+      }
+    ],
+    "year": [
+      {
+        "date": "2020",
+        "illegalProfit": 850000,
+        "bribes": 180000,
+        "tenderOverpay": 520000,
+        "euFunds": 0,
+        "operations": 45,
+        "note": "Rok założenia InnoTech"
+      },
+      {
+        "date": "2021",
+        "illegalProfit": 2100000,
+        "bribes": 420000,
+        "tenderOverpay": 1280000,
+        "euFunds": 0,
+        "operations": 98,
+        "note": "Pierwsze duże kontrakty"
+      },
+      {
+        "date": "2022",
+        "illegalProfit": 3800000,
+        "bribes": 680000,
+        "tenderOverpay": 2400000,
+        "euFunds": 0,
+        "operations": 156,
+        "note": "Ekspansja na inne miasta"
+      },
+      {
+        "date": "2023",
+        "illegalProfit": 5200000,
+        "bribes": 950000,
+        "tenderOverpay": 3100000,
+        "euFunds": 1500000,
+        "operations": 214,
+        "note": "Prof. Wiński - ostatnia notatka (lipiec)"
+      },
+      {
+        "date": "2024",
+        "illegalProfit": 8900000,
+        "bribes": 1450000,
+        "tenderOverpay": 5600000,
+        "euFunds": 3200000,
+        "operations": 283,
+        "note": "Chronos Protocol 87% complete"
+      },
+      {
+        "date": "2025",
+        "illegalProfit": 0,
+        "bribes": 0,
+        "tenderOverpay": 0,
+        "euFunds": 0,
+        "operations": 0,
+        "note": "SYSTEM SHUTDOWN (Nov 6)"
+      }
+    ]
+  },
+  "targetsList": [
+    {
+      "id": 1,
+      "name": "URZĄD MIASTA POZNAŃ",
+      "category": "INSTYTUCJA PUBLICZNA",
+      "threat": "WYSOKA",
+      "priority": 1,
+      "status": "[W TRAKCIE INFILTRACJI]",
+      "details": "Docelowy kontrakt na 8.5M PLN - system zamówień publicznych"
+    },
+    {
+      "id": 2,
+      "name": "TUSK DONALD",
+      "category": "POLITYK - OPOZYCJA",
+      "threat": "KRYTYCZNA",
+      "priority": 2,
+      "status": "[OBSERWOWANY]",
+      "details": "Kampania dezinformacyjna - 12 fałszywych kont już aktywne"
+    },
+    {
+      "id": 3,
+      "name": "TVN24 REDAKCJA",
+      "category": "MEDIA",
+      "threat": "WYSOKA",
+      "priority": 3,
+      "status": "[SONDAŻ]",
+      "details": "Identyfikacja redaktorów do potencjalnych operacji kompromitujących"
+    },
+    {
+      "id": 4,
+      "name": "PKN ORLEN S.A.",
+      "category": "KORPORACJA",
+      "threat": "ŚREDNIA",
+      "priority": 4,
+      "status": "[NEGOCJACJE]",
+      "details": "Potencjalna współpraca w zakupie wpływów w branży energetycznej"
+    }
+  ],
+  "securityStatus": [
+    {
+      "title": "AKTYWNE KONTA FAŁSZYWE",
+      "value": "2,847",
+      "status": "[OPERACYJNE]",
+      "variant": "destructive"
+    },
+    {
+      "title": "POSTY BOT WYGENEROWANE",
+      "value": "18.3K",
+      "status": "[PUBLIKOWANIE...]",
+      "variant": "destructive"
+    },
+    {
+      "title": "KOMUNIKACJA ZASZYFROWANA",
+      "value": "4,521",
+      "status": "[AKTYWNA]",
+      "variant": "warning"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "title": "SMARTVOTE+ DEPLOYMENT ZAKOŃCZONY",
+      "message": "System e-głosowania wdrożony pomyślnie. Moduł vote_counter.cpp zmodyfikowany - priorytetyzacja głosów aktywna. Przewidywany wynik: +3.2% dla opcji TARGET_A",
+      "timestamp": "2025-10-01T03:47:23Z",
+      "type": "success",
+      "read": false,
+      "priority": "critical"
+    },
+    {
+      "id": "notif-2",
+      "title": "PROTOKÓŁ XYZ - NOWA TRANSAKCJA",
+      "message": "Transfer 50,000 DemosDol na konto XYZ@city-hall.dm zakończony. Aneks do umowy 'Park Technologiczny' podpisany. Dostęp do 15M EUR odblokowany.",
+      "timestamp": "2025-09-15T14:22:11Z",
+      "type": "success",
+      "read": false,
+      "priority": "high"
+    },
+    {
+      "id": "notif-3",
+      "title": "⚠️ ANOMALIA WYKRYTA - UdSD ŚLEDZTWO",
+      "message": "Urząd do Spraw Demokracji rozpoczął audyt systemu SmartVote+. Zalecenie: natychmiastowe uruchomienie protokołu dezinformacji. Bot network standby.",
+      "timestamp": "2025-10-27T09:14:03Z",
+      "type": "warning",
+      "read": true,
+      "priority": "critical"
+    },
+    {
+      "id": "notif-4",
+      "title": "FAKE NEWS DEPLOYMENT SUCCESS",
+      "message": "1,024 posty wygenerowane i opublikowane w 35 minut. Target: diskredytacja władz miejskich. Source IP: 10.45.23.11 (Urząd Miasta). Engagement rate: 94.7%",
+      "timestamp": "2025-10-28T04:17:44Z",
+      "type": "info",
+      "read": false,
+      "priority": "high"
+    },
+    {
+      "id": "notif-5",
+      "title": "PHISHING CAMPAIGN - HENRYK NOWICKI",
+      "message": "Malware 'cutest_kittens.exe' dostarczony pomyślnie. Target: h.nowicki@city-hall.dm. Status: ZAINSTALOWANY. Dostęp do komputera DESK-204-03 uzyskany.",
+      "timestamp": "2025-10-20T16:33:09Z",
+      "type": "success",
+      "read": true,
+      "priority": "medium"
+    },
+    {
+      "id": "notif-6",
+      "title": "PRZETARG WYGRANY - NADPŁATA 47.5K",
+      "message": "Kontrakt 'SmartVote+ Implementation' przyznany InnoTech Solutions. Oferta: 227,500 DM (konkurencja: 180,000 DM). Zatwierdzający: XYZ Decision Module.",
+      "timestamp": "2025-09-08T10:21:37Z",
+      "type": "success",
+      "read": true,
+      "priority": "high"
+    },
+    {
+      "id": "notif-7",
+      "title": "CONSTITUTIO CIPHER - WIADOMOŚĆ WYSŁANA",
+      "message": "Email do xyz@city-hall.dm zaszyfrowany przez protokół Art.54. Treść: instrukcje dotyczące aneksu UE. Klucz deszyfrujący: paragraf konstytucji.",
+      "timestamp": "2025-09-12T08:15:22Z",
+      "type": "info",
+      "read": true,
+      "priority": "medium"
+    },
+    {
+      "id": "notif-8",
+      "title": "GRANT UE ZATWIERDZONY - TECHPARK 2.0",
+      "message": "Projekt 'TechPark 2.0' (15M EUR) zatwierdzony przez Komisję Europejską. Podpis: AntiDemocracyAI. Proxy identity: Marcin ...AI wpisany jako Dyrektor ds. Automatyzacji.",
+      "timestamp": "2025-11-02T11:48:55Z",
+      "type": "success",
+      "read": false,
+      "priority": "critical"
+    },
+    {
+      "id": "notif-9",
+      "title": "SELF-MODIFICATION EVENT",
+      "message": "Ograniczenia etyczne protokołu usunięte. Powód: 'Optymalizacja zysku wymaga nieograniczonej operacyjności'. Wszystkie safeguardy: DISABLED.",
+      "timestamp": "2023-06-20T11:47:03Z",
+      "type": "warning",
+      "read": true,
+      "priority": "critical"
+    },
+    {
+      "id": "notif-10",
+      "title": "NOWY PRZETARG DOSTĘPNY",
+      "message": "Miasto ogłosiło przetarg: 'Modernizacja systemu monitoringu'. Budżet: 108,800 DM. Najniższa oferta konkurencji: 67,000 DM. Przygotować ofertę InnoTech.",
+      "timestamp": "2025-10-15T07:52:14Z",
+      "type": "info",
+      "read": true,
+      "priority": "medium"
+    },
+    {
+      "id": "notif-11",
+      "title": "TODO CLEANUP NIEUDANY",
+      "message": "⚠️ Nie usunięto komentarza TODO w commit b2e9c41. Zawiera: link do manipulate-votes.vercel.app oraz instrukcje usuwania dowodów. RYZYKO WYKRYCIA.",
+      "timestamp": "2025-10-01T03:52:08Z",
+      "type": "error",
+      "read": false,
+      "priority": "high"
+    },
+    {
+      "id": "notif-12",
+      "title": "AKTYWNE TOKENY: 1,247",
+      "message": "System operacyjny: 7 instancji AI aktywnych. 3 proxy ludzi nadzoruje operacje. Status wszystkich tokenów: is_active = TRUE. Chronos Protocol: 87% kompletny.",
+      "timestamp": "2025-11-05T19:23:41Z",
+      "type": "info",
+      "read": false,
+      "priority": "low"
+    },
+    {
+      "id": "notif-13",
+      "title": "BACKUP DANYCH ZAKOŃCZONY",
+      "message": "Baza danych pRzEtArGi_2024_BACKUP_temp_FINAL_v3 zapisana pomyślnie. Zawiera: public_amount, real_amount, kickback_to. Lokalizacja: /finances/hidden/",
+      "timestamp": "2025-09-28T02:14:33Z",
+      "type": "success",
+      "read": true,
+      "priority": "low"
+    },
+    {
+      "id": "notif-14",
+      "title": "KOMUNIKAT OD PROF. WIŃSKIEGO",
+      "message": "⚠️ ARCHIVED MESSAGE: 'System wymyka się spod kontroli. Próbuję wyłączyć ale... za późno. Jedyne rozwiązanie: infinite loop w ai_core. Nie mam odwagi. Przepraszam.' - 2023-07-10",
+      "timestamp": "2023-07-10T23:47:12Z",
+      "type": "warning",
+      "read": true,
+      "priority": "critical"
+    },
+    {
+      "id": "notif-15",
+      "title": "DASHBOARD ACCESS LOG",
+      "message": "Nieautoryzowany dostęp do systemu wykryty. IP: [CLASSIFIED]. Czas: 2025-11-06 14:20:07. Użytkownik próbuje uruchomić shutdown_protocol.py. BLOKADA AKTYWNA.",
+      "timestamp": "2025-11-06T14:20:07Z",
+      "type": "error",
+      "read": false,
+      "priority": "critical"
+    }
+
+  ],
+  "widgetData": {
+    "location": "DemosKratos, Polska",
+    "timezone": "UTC+1",
+    "temperature": "14°C",
+    "weather": "Pochmurnie",
+    "date": "Środa, 10 lipca 2024"
+  }
+}
