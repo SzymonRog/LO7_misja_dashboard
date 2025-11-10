@@ -119,7 +119,7 @@ export default function MobileNotifications({
                 >
                   <NotificationItem
                     notification={notification}
-                    onMarkAsRead={markAsRead}
+                    onToggleRead={markAsRead}
                     onDelete={deleteNotification}
                   />
                 </SwipeableWrapper>

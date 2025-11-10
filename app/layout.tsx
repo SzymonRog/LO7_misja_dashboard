@@ -12,6 +12,7 @@ import Widget from "@/components/dashboard/widget";
 import Notifications from "@/components/dashboard/notifications";
 import { MobileChat } from "@/components/chat/mobile-chat";
 import Chat from "@/components/chat";
+import { Toaster } from "@/components/ui/sonner"
 
 const mockData = mockDataJson as MockData;
 
@@ -83,6 +84,7 @@ export default function RootLayout({
             <MobileChat />
           </SidebarProvider>
         </V0Provider>
+        <Toaster />
       </body>
     </html>
   );

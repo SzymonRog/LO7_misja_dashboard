@@ -69,13 +69,24 @@ export interface CorruptionTarget {
   details: string
 }
 
+export interface EmailItem {
+    id: string;
+    subject: string;
+    to: string;
+    content: string;
+    preview: string;
+    source: string;
+    date: string;
+}
+
 export interface MockData {
-  dashboardStats: DashboardStat[]
-  chartData: ChartData
-  targetsList: CorruptionTarget[]
-  securityStatus: SecurityStatus[]
-  notifications: Notification[]
-  widgetData: WidgetData
+    dashboardStats: DashboardStat[]
+    chartData: ChartData
+    targetsList: CorruptionTarget[]
+    securityStatus: SecurityStatus[]
+    notifications: Notification[]
+    widgetData: WidgetData
+    emails: EmailItem[]
 }
 
 export type TimePeriod = "week" | "month" | "year"
