@@ -46,6 +46,7 @@ export default function EmailPage() {
                         description="Login to your email account by providing your email"
                         placeholder="Enter your email"
                         onUnlock={() => setUnlocked(true)}
+                        haveRules={false}
                     />
                 </div>
             </DashboardPageLayout>

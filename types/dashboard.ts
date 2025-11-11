@@ -79,6 +79,43 @@ export interface EmailItem {
     date: string;
 }
 
+export interface GrantItem {
+    table_id: number;
+    id: number;
+    project_name: string;
+    contractor: string;
+    signed_by: string;
+    value: number;
+    signed_date: string;
+    duration_years: number;
+    status: string;
+}
+
+export interface CompanyItem {
+    table_id: number;
+    id: number;
+    name: string;
+    bip_rating: number;
+    local_rating: number;
+    reviews_count: number;
+    tenders_won: number;
+    total_value: number;
+    status: string;
+}
+
+export interface TenderItem {
+    table_id: number;
+    id: number;
+    name: string;
+    winner: string;
+    lowest_bid: number;
+    winning_bid: number;
+    date: string;
+    status: string;
+}
+
+
+
 export interface MockData {
     dashboardStats: DashboardStat[]
     chartData: ChartData
@@ -87,6 +124,10 @@ export interface MockData {
     notifications: Notification[]
     widgetData: WidgetData
     emails: EmailItem[]
+    tenders: TenderItem[]
+    grants: GrantItem[]
+    companies: CompanyItem[]
+
 }
 
 export type TimePeriod = "week" | "month" | "year"

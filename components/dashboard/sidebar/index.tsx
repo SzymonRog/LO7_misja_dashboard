@@ -1,203 +1,155 @@
 "use client";
 
 import * as React from "react";
-
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuBadge,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarRail,
+    Sidebar,
+    SidebarContent,
+    SidebarFooter,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuBadge,
+    SidebarMenuButton,
+    SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
-import AtomIcon from "@/components/icons/atom";
-import BracketsIcon from "@/components/icons/brackets";
-import ProcessorIcon from "@/components/icons/proccesor";
-import CuteRobotIcon from "@/components/icons/cute-robot";
-import EmailIcon from "@/components/icons/email";
-import GearIcon from "@/components/icons/gear";
-import MonkeyIcon from "@/components/icons/monkey";
-import DotsVerticalIcon from "@/components/icons/dots-vertical";
 import { Bullet } from "@/components/ui/bullet";
 import LockIcon from "@/components/icons/lock";
 import Image from "next/image";
 import { useIsV0 } from "@/lib/v0-context";
-import DashboardCard from "@/components/dashboard/card";
-import {Card, CardContent} from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation"; // <--- KLUCZOWA LINIA
 
-// This is sample data for the sidebar
+import AtomIcon from "@/components/icons/atom";
+import BracketsIcon from "@/components/icons/brackets";
+import CuteRobotIcon from "@/components/icons/cute-robot";
+import EmailIcon from "@/components/icons/email";
+import GearIcon from "@/components/icons/gear";
+import MonkeyIcon from "@/components/icons/monkey";
+
 const data = {
-  navMain: [
-    {
-      title: "Tools",
-      items: [
+    navMain: [
         {
-          title: "Dahboard",
-          url: "/",
-          icon: BracketsIcon,
-          isActive: true,
+            title: "Tools",
+            items: [
+                { title: "Dashboard", url: "/", icon: BracketsIcon },
+                { title: "Dane", url: "/dane", icon: AtomIcon },
+                { title: "Zabezpieczenia", url: "/zabezpieczenia", icon: CuteRobotIcon },
+                { title: "Poczta", url: "/poczta", icon: EmailIcon },
+                { title: "Admin Settings", url: "/admin", icon: GearIcon, locked: true },
+            ],
         },
-        {
-          title: "Dane",
-          url: "/data",
-          icon: AtomIcon,
-          isActive: false,
-        },
-        {
-          title: "Zabezpieczenia",
-          url: "/zabezpieczenia",
-          icon: CuteRobotIcon,
-          isActive: false,
-        },
-        {
-          title: "Poczta",
-          url: "/poczta",
-          icon: EmailIcon,
-          isActive: false,
-        },
-        {
-          title: "Admin Settings",
-          url: "/admin",
-          icon: GearIcon,
-          isActive: false,
-          locked: true,
-        },
-      ],
+    ],
+    user: {
+        name: "ADMIN_USER",
+        email: "krimson@joyco.studio",
+        avatar: "/avatars/user_krimson.png",
     },
-  ],
-  desktop: {
-    title: "Desktop (Online)",
-    status: "online",
-  },
-  user: {
-    name: "KRIMSON",
-    email: "krimson@joyco.studio",
-    avatar: "/avatars/user_krimson.png",
-  },
 };
 
-export function DashboardSidebar({
-  className,
-  ...props
-}: React.ComponentProps<typeof Sidebar>) {
-  const isV0 = useIsV0();
+export function DashboardSidebar({ className, ...props }: React.ComponentProps<typeof Sidebar>) {
+    const isV0 = useIsV0();
+    const pathname = usePathname(); // <-- aktualny URL (np. "/poczta")
 
-  return (
-    <Sidebar {...props} className={cn("py-sides", className)}>
-      <SidebarHeader className="rounded-t-lg flex gap-3 flex-row rounded-b-none">
-        <div className="flex overflow-clip size-12 shrink-0 items-center justify-center rounded bg-sidebar-primary-foreground/10 transition-colors group-hover:bg-sidebar-primary text-sidebar-primary-foreground">
-          <MonkeyIcon className="size-10 group-hover:scale-[1.7] origin-top-left transition-transform" />
-        </div>
-        <div className="grid flex-1 text-left text-sm leading-tight">
-          <span className="text-2xl font-display">M.O.N.K.Y.</span>
-          <span className="text-xs uppercase">The OS for Rebels</span>
-        </div>
-      </SidebarHeader>
+    return (
+        <Sidebar {...props} className={cn("py-sides", className)}>
+            {/* HEADER */}
+            <SidebarHeader className="rounded-t-lg flex gap-3 flex-row rounded-b-none">
+                <div className="flex overflow-clip size-12 shrink-0 items-center justify-center rounded bg-sidebar-primary-foreground/10 text-sidebar-primary-foreground">
+                    <MonkeyIcon className="size-10" />
+                </div>
+                <div className="grid flex-1 text-left text-sm leading-tight">
+                    <span className="text-2xl font-display">TrueComp</span>
+                    <span className="text-xs uppercase">The voice of democracy</span>
+                </div>
+            </SidebarHeader>
 
-      <SidebarContent>
-        {data.navMain.map((group, i) => (
-          <SidebarGroup
-            className={cn(i === 0 && "rounded-t-none")}
-            key={group.title}
-          >
-            <SidebarGroupLabel>
-              <Bullet className="mr-2" />
-              {group.title}
-            </SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {group.items.map((item) => (
-                  <SidebarMenuItem
-                    key={item.title}
-                    className={cn(
-                      item.locked && "pointer-events-none opacity-50",
-                      isV0 && "pointer-events-none"
-                    )}
-                    data-disabled={item.locked}
-                  >
-                    <SidebarMenuButton
-                      asChild={!item.locked}
-                      isActive={item.isActive}
-                      disabled={item.locked}
-                      className={cn(
-                        "disabled:cursor-not-allowed",
-                        item.locked && "pointer-events-none"
-                      )}
-                    >
-                      {item.locked ? (
-                        <div className="flex items-center gap-3 w-full">
-                          <item.icon className="size-5" />
-                          <span>{item.title}</span>
-                        </div>
-                      ) : (
-                        <a href={item.url}>
-                          <item.icon className="size-5" />
-                          <span>{item.title}</span>
-                        </a>
-                      )}
-                    </SidebarMenuButton>
-                    {item.locked && (
-                      <SidebarMenuBadge>
-                        <LockIcon className="size-5 block" />
-                      </SidebarMenuBadge>
-                    )}
-                  </SidebarMenuItem>
+            {/* MENU */}
+            <SidebarContent>
+                {data.navMain.map((group, i) => (
+                    <SidebarGroup key={group.title} className={cn(i === 0 && "rounded-t-none")}>
+                        <SidebarGroupLabel>
+                            <Bullet className="mr-2" />
+                            {group.title}
+                        </SidebarGroupLabel>
+                        <SidebarGroupContent>
+                            <SidebarMenu>
+                                {group.items.map((item) => {
+                                    const isActive = pathname === item.url; // <-- aktywna zakładka
+                                    return (
+                                        <SidebarMenuItem
+                                            key={item.title}
+                                            className={cn(
+                                                item.locked && "pointer-events-none opacity-50",
+                                                isV0 && "pointer-events-none"
+                                            )}
+                                        >
+                                            <SidebarMenuButton
+                                                asChild={!item.locked}
+                                                isActive={isActive}
+                                                disabled={item.locked}
+                                            >
+                                                {item.locked ? (
+                                                    <div className="flex items-center gap-3 w-full">
+                                                        <item.icon className="size-5" />
+                                                        <span>{item.title}</span>
+                                                    </div>
+                                                ) : (
+                                                    <a href={item.url}>
+                                                        <item.icon className="size-5" />
+                                                        <span>{item.title}</span>
+                                                    </a>
+                                                )}
+                                            </SidebarMenuButton>
+                                            {item.locked && (
+                                                <SidebarMenuBadge>
+                                                    <LockIcon className="size-5 block" />
+                                                </SidebarMenuBadge>
+                                            )}
+                                        </SidebarMenuItem>
+                                    );
+                                })}
+                            </SidebarMenu>
+                        </SidebarGroupContent>
+                    </SidebarGroup>
                 ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        ))}
-      </SidebarContent>
+            </SidebarContent>
 
-      <SidebarFooter className="p-0">
-        <SidebarGroup>
-          <SidebarGroupLabel>
-            <Bullet className="mr-2" />
-            User
-          </SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                  <CardContent className="flex gap-0.5 w-full group cursor-pointer">
-                    <div className="shrink-0 flex size-14 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground overflow-clip">
-                      <Image
-                        src={data.user.avatar}
-                        alt={data.user.name}
-                        width={120}
-                        height={120}
-                      />
-                    </div>
-                    <div className="group/item pl-3 pr-1.5 pt-2 pb-1.5 flex-1 flex bg-sidebar-accent hover:bg-sidebar-accent-active/75 items-center rounded group-data-[state=open]:bg-sidebar-accent-active group-data-[state=open]:hover:bg-sidebar-accent-active group-data-[state=open]:text-sidebar-accent-foreground">
-                      <div className="grid flex-1 text-left text-sm leading-tight">
-                        <span className="truncate text-xl font-display">
-                          {data.user.name}
-                        </span>
-                        <span className="truncate text-xs uppercase opacity-50 group-hover/item:opacity-100">
-                          {data.user.email}
-                        </span>
-                      </div>
-
-                    </div>
-                  </CardContent>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarFooter>
-
-
-    </Sidebar>
-  );
+            {/* FOOTER */}
+            <SidebarFooter className="p-0">
+                <SidebarGroup>
+                    <SidebarGroupLabel>
+                        <Bullet className="mr-2" />
+                        User
+                    </SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            <SidebarMenuItem>
+                                <CardContent className="flex gap-0.5 w-full group cursor-pointer">
+                                    <div className="shrink-0 flex size-14 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground overflow-clip">
+                                        <Image
+                                            src={data.user.avatar}
+                                            alt={data.user.name}
+                                            width={120}
+                                            height={120}
+                                        />
+                                    </div>
+                                    <div className="pl-3 pr-1.5 pt-2 pb-1.5 flex-1 flex bg-sidebar-accent hover:bg-sidebar-accent-active/75 items-center rounded">
+                                        <div className="grid flex-1 text-left text-sm leading-tight">
+                                            <span className="truncate text-xl font-display">{data.user.name}</span>
+                                            <span className="truncate text-xs uppercase opacity-50">
+                        {data.user.email}
+                      </span>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </SidebarMenuItem>
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
+            </SidebarFooter>
+        </Sidebar>
+    );
 }
