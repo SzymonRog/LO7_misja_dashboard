@@ -63,7 +63,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                 <MobileHeader mockData={mockData} />
 
                 {/* Desktop Layout */}
-                <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-gap lg:px-sides">
+                <div className="h-full w-full grid grid-cols-1 lg:grid-cols-12 gap-gap lg:px-sides">
                     <div className="hidden lg:block col-span-2 top-0 relative">
                         <DashboardSidebar />
                     </div>
@@ -73,12 +73,15 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                         </SectionTransition>
                     </div>
                     <div className="col-span-3 hidden lg:block">
-                        <div className="space-y-gap py-sides min-h-screen max-h-screen sticky top-0 overflow-clip">
+                        <div className="space-y-gap py-sides min-h-screen max-h-screen top-0 sticky overflow-visible">
                             <Widget widgetData={mockData.widgetData} />
                             <Notifications
                                 initialNotifications={mockData.notifications}
                             />
-                            <Chat />
+                            <div className="fixed max-w-[550px] w-full bottom-0 right-4 ">
+                                <Chat />
+                            </div>
+
                         </div>
                     </div>
                 </div>

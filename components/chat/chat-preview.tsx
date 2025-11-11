@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { ChatConversation } from "@/types/chat";
+import type {ChatConversation, ChatUser} from "@/types/chat";
 import { formatDate } from "./utils";
 import { mockChatData } from "@/data/chat-mock";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ export default function ChatPreview({
   conversation,
   onOpenConversation,
 }: ChatPreviewProps) {
-  const user = conversation.participants.find(
+  const user = conversation.participants.filter(
     (p) => p.id !== mockChatData.currentUser.id
   );
 
@@ -26,8 +26,8 @@ export default function ChatPreview({
     >
       <div className="relative">
         <Image
-          src={user.avatar}
-          alt={user.name}
+          src={user[0].avatar}
+          alt={user.map((u : ChatUser)=> u.name).join(", ")}
           width={96}
           height={96}
           className="rounded-lg size-14"
@@ -42,11 +42,13 @@ export default function ChatPreview({
       <div className="flex-1 min-w-0 group-hover:bg-accent px-2 py-1 rounded">
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-2">
-            <h3 className="font-display text-lg">{user.name}</h3>
-            <p className="text-xs text-foreground/50">{user.username}</p>
+            <h3 className="font-display text-lg">{user.map((u : ChatUser)=> u.name).join(", ")}</h3>
+            <p className="text-xs text-foreground/50">{user.length > 1 ? "" :  user[0].username }</p>
           </div>
           <span className="text-xs text-foreground/40">
-            {formatDate(conversation.lastMessage.timestamp)}
+            {conversation.lastMessage?.timestamp
+                ? formatDate(conversation.lastMessage.timestamp)
+                : "Brak wiadomości"}
           </span>
         </div>
         <p
@@ -55,7 +57,9 @@ export default function ChatPreview({
             conversation.unreadCount > 0 && "font-bold text-foreground"
           )}
         >
-          {conversation.lastMessage.content}
+            {conversation.lastMessage?.timestamp
+                ? formatDate(conversation.lastMessage.timestamp)
+                : "Brak wiadomości"}
         </p>
       </div>
     </div>

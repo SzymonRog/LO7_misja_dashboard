@@ -14,6 +14,7 @@ export default function ChatExpanded({
   conversations,
   onOpenConversation,
   onGoBack,
+
 }: ChatExpandedProps) {
   return (
     <motion.div
@@ -42,9 +43,10 @@ export default function ChatExpanded({
       {/* Conversations List */}
       <div className="flex-1 overflow-y-auto max-h-80">
         {conversations.map((conversation) => {
-          const otherUser = conversation.participants.find(
+          const otherUser = conversation.participants.filter(
             (p) => p.id !== mockChatData.currentUser.id
           );
+          console.log(otherUser)
           if (!otherUser) return null;
 
           return (

@@ -12,6 +12,7 @@ import PlusIcon from "../icons/plus";
 import MinusIcon from "../icons/minus";
 import ArrowLeftIcon from "../icons/arrow-left";
 import { useIsV0 } from "@/lib/v0-context";
+import {ChatUser} from "@/types/chat";
 
 interface ChatHeaderProps {
   onClick?: () => void;
@@ -43,7 +44,7 @@ export function ChatHeader({
     variant === "mobile"
       ? false
       : chatState.state === "collapsed" && hasNewMessages;
-  const otherUser = activeConversation?.participants.find(
+  const otherUser = activeConversation?.participants.filter(
     (p) => p.id !== mockChatData.currentUser.id
   );
 
@@ -119,7 +120,7 @@ export function ChatHeader({
             // Mobile variant
             if (variant === "mobile") {
               if (chatState.state === "conversation") {
-                return otherUser?.name || "CONVERSATION";
+                return otherUser?.map((u : ChatUser) => u.name).join(", ") || "CONVERSATION";
               }
               return "ONLINE";
             }
@@ -134,7 +135,7 @@ export function ChatHeader({
             }
 
             if (chatState.state === "conversation") {
-              return otherUser?.name || "CONVERSATION";
+              return otherUser?.map((u : ChatUser) => u.name).join(", ") || "CONVERSATION";
             }
 
             return "ONLINE";

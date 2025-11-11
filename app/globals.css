@@ -171,6 +171,16 @@
   opacity: 0;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    -ms-overflow-style: none;  /* IE i Edge */
+    scrollbar-width: none;     /* Firefox */
+    overflow-y: scroll;        /* Zapobiega skokom layoutu */
+}
+
 @media (min-width: 1028px) {
   html {
     font-size: 0.7em;
