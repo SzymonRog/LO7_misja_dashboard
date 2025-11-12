@@ -1,23 +1,40 @@
-// pages/api/unlock-section.ts
-import type { NextApiRequest, NextApiResponse } from "next";
-import {NextResponse} from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const SECTIONS = [
-    { id: "email", password: "innotech-solutions@gmail.com" },
-    { id: "data", password: "notifyme" },
-    { id: "stats", password: "chartlover" },
+    { id: "email", password: "tajne-haslo" },
+    { id: "data", password: "tajne-haslo" },
+    { id: "stats", password: "tajne-haslo" },
+    { id: "auth", password: "tajne-haslo" }, // Główny auth
 ];
 
-export async function POST(req: NextResponse) {
-    const body = await req.json();
-    const { sectionId, password } = body;
+export async function POST(req: NextRequest) {
+    try {
+        const body = await req.json();
+        const { sectionId, password } = body;
 
-    if (password === "tajne-haslo") {
-        return NextResponse.json({ success: true });
+        // Znajdź sekcję
+        const section = SECTIONS.find(s => s.id === sectionId);
+
+        if (!section) {
+            return NextResponse.json(
+                { success: false, message: "Nieznana sekcja" },
+                { status: 404 }
+            );
+        }
+
+        // Sprawdź hasło
+        if (password === section.password) {
+            return NextResponse.json({ success: true });
+        }
+
+        return NextResponse.json(
+            { success: false, message: "Nieprawidłowe hasło" },
+            { status: 401 }
+        );
+    } catch (error) {
+        return NextResponse.json(
+            { success: false, message: "Błąd serwera" },
+            { status: 500 }
+        );
     }
-
-    return NextResponse.json(
-        { success: false, message: "Wrong password" },
-        { status: 401 }
-    );
 }

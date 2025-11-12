@@ -9,6 +9,9 @@ import ProcessorIcon from "@/components/icons/proccesor"
 import BoomIcon from "@/components/icons/boom"
 import mockDataJson from "@/mock.json"
 import type { MockData } from "@/types/dashboard"
+import ProtectedPage from "@/components/ProtectedPage";
+import {DatabaseIcon} from "lucide-react";
+import {AuthProvider} from "@/components/contexts/AuthContext";
 
 const mockData = mockDataJson as MockData
 
@@ -21,6 +24,7 @@ const iconMap = {
 
 export default function DashboardOverview() {
   return (
+
     <DashboardPageLayout
       header={{
         title: "PRZEGLĄD",
@@ -53,5 +57,6 @@ export default function DashboardOverview() {
         <SecurityStatus statuses={mockData.securityStatus} />
       </div>
     </DashboardPageLayout>
+
   )
 }

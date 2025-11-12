@@ -1,5 +1,5 @@
 "use client"
-import SectionLogin from "@/components/auth/SectionLoginProps";
+import SectionLogin from "@/components/auth/SectionLogin";
 import { useState } from "react";
 import { DatabaseIcon } from "lucide-react";
 import DashboardPageLayout from "@/components/dashboard/layout";
@@ -39,14 +39,14 @@ export default function Dane() {
     if (!unlocked) {
         return (
             <DashboardPageLayout header={{ title: "Login", icon: DatabaseIcon }}>
-                <div className="flex justify-center bg-background/50 backdrop-blur-xl py-8">
+                <div className="flex justify-center items-center bg-background/50 backdrop-blur-xl py-8">
                     <SectionLogin
                         sectionId="dane"
                         label="Baza danych"
                         onUnlock={() => setUnlocked(true)}
                         description="Musisz znać nasze przedziwne hasło by tu wejść"
                         placeholder="Wpisz hasło"
-                        haveRules={true}
+                        haveRules={false}
                     />
                 </div>
             </DashboardPageLayout>

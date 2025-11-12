@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import DashboardPageLayout from "@/components/dashboard/layout"
 import DashboardCard from "@/components/dashboard/card"
-import SectionLogin from "@/components/auth/SectionLoginProps"
+import SectionLogin from "@/components/auth/SectionLogin"
 import mockDataJson from "@/mock.json"
 import type { EmailItem, MockData } from "@/types/dashboard"
 import { InboxIcon, ShieldCheckIcon, InfoIcon, LockIcon, ArrowLeftIcon, ExternalLinkIcon } from "lucide-react"
@@ -39,7 +39,7 @@ export default function EmailPage() {
     if (!unlocked) {
         return (
             <DashboardPageLayout header={{ title: "Login", icon: EmailIcon }}>
-                <div className="flex justify-center bg-background/50 backdrop-blur-xl">
+                <div className="flex justify-center items-center bg-background/50 backdrop-blur-xl">
                     <SectionLogin
                         sectionId="email"
                         label="Emails"

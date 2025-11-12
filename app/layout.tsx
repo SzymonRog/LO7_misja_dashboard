@@ -14,6 +14,8 @@ import { MobileChat } from "@/components/chat/mobile-chat";
 import Chat from "@/components/chat";
 import { Toaster } from "@/components/ui/sonner"
 import SectionTransition from "@/components/section-transition";
+import {AuthProvider} from "@/components/contexts/AuthContext";
+import DashboardAuth from "@/components/auth/DashboardAuth";
 
 const mockData = mockDataJson as MockData;
 
@@ -42,6 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
 
+
     return (
         <html lang="en" className="dark">
         <head>
@@ -57,39 +60,43 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <body
             className={`${rebelGrotesk.variable} ${robotoMono.variable} antialiased`}
         >
-        <V0Provider isV0={isV0}>
-            <SidebarProvider>
-                {/* Mobile Header - only visible on mobile */}
-                <MobileHeader mockData={mockData} />
+        <AuthProvider>
+            <DashboardAuth>
+                <V0Provider isV0={isV0}>
+                    <SidebarProvider>
+                        {/* Mobile Header - only visible on mobile */}
+                        <MobileHeader mockData={mockData} />
 
-                {/* Desktop Layout */}
-                <div className="h-full w-full grid grid-cols-1 lg:grid-cols-12 gap-gap lg:px-sides">
-                    <div className="hidden lg:block col-span-2 top-0 relative">
-                        <DashboardSidebar />
-                    </div>
-                    <div className="col-span-1 lg:col-span-7">
-                        <SectionTransition>
-                            {children}
-                        </SectionTransition>
-                    </div>
-                    <div className="col-span-3 hidden lg:block">
-                        <div className="space-y-gap py-sides min-h-screen max-h-screen top-0 sticky overflow-visible">
-                            <Widget widgetData={mockData.widgetData} />
-                            <Notifications
-                                initialNotifications={mockData.notifications}
-                            />
-                            <div className="fixed max-w-[550px] w-full bottom-0 right-4 ">
-                                <Chat />
+                        {/* Desktop Layout */}
+                        <div className="h-full w-full grid grid-cols-1 lg:grid-cols-12 gap-gap lg:px-sides">
+                            <div className="hidden lg:block col-span-2 top-0 relative">
+                                <DashboardSidebar />
                             </div>
+                            <div className="col-span-1 lg:col-span-7">
+                                <SectionTransition>
+                                    {children}
+                                </SectionTransition>
+                            </div>
+                            <div className="col-span-3 hidden lg:block">
+                                <div className="space-y-gap py-sides min-h-screen max-h-screen top-0 sticky overflow-visible">
+                                    <Widget widgetData={mockData.widgetData} />
+                                    <Notifications
+                                        initialNotifications={mockData.notifications}
+                                    />
+                                    <div className="fixed max-w-[550px] w-full bottom-0 right-4 ">
+                                        <Chat />
+                                    </div>
 
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* Mobile Chat - floating CTA with drawer */}
-                <MobileChat />
-            </SidebarProvider>
-        </V0Provider>
+                        {/* Mobile Chat - floating CTA with drawer */}
+                        <MobileChat />
+                    </SidebarProvider>
+                </V0Provider>
+            </DashboardAuth>
+        </AuthProvider>
         <Toaster />
         </body>
         </html>
