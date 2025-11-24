@@ -24,7 +24,7 @@ export default function TargetsList({ targets }: TargetsListProps) {
   }
 
   return (
-    <DashboardCard title="NASTĘPNE CELE" intent="default" addon={<Badge variant="outline-warning">4 AKTYWNE</Badge>}>
+    <DashboardCard title="ZADANIA" intent="default" addon={<Badge variant="outline-warning">{targets.filter(target => target.status === "[AKTYWNE]").length} Aktywne zadanie</Badge>}>
       <div className="space-y-4">
         {targets.map((target) => (
           <div
@@ -32,20 +32,20 @@ export default function TargetsList({ targets }: TargetsListProps) {
             className="flex items-start gap-3 p-3 rounded-lg bg-accent border border-pop hover:border-primary transition-colors"
           >
             <div className="flex-shrink-0">
-              <div className={cn("rounded px-2.5 py-1.5 text-sm font-bold", getThreatColor(target.threat))}>
-                {target.priority}
+              <div className={cn("rounded px-2.5 py-1.5 text-sm font-bold, border-0.5 ")}>
+                {target.priority}.
               </div>
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <h3 className="font-display text-lg text-foreground">{target.name}</h3>
-                <Badge variant="outline" className="text-xs">
-                  {target.category}
-                </Badge>
+              <div className="flex items-center gap-2 mb-1 flex-wrap font-medium">
+                <h3 className="text-md text-foreground uppercase font-bold">{target.name}</h3>
+                {/*<Badge variant="outline" className="text-xs">*/}
+                {/*  {target.category}*/}
+                {/*</Badge>*/}
               </div>
               <p className="text-sm text-muted-foreground mb-2">{target.details}</p>
               <div className="flex items-center justify-between gap-2 text-xs">
-                <Badge variant="secondary">{target.threat}</Badge>
+                <Badge variant="secondary" className={cn("", getThreatColor(target.threat))}>{target.threat}</Badge>
                 <span className="text-muted-foreground italic">{target.status}</span>
               </div>
             </div>

@@ -1,25 +1,25 @@
 {
   "dashboardStats": [
     {
-      "label": "INGERENCJA W WYBORY",
+      "label": "WYGRANE PRZETARGI",
       "value": "12",
-      "description": "SFAŁSZOWANE KAMPANIE",
+      "description": "NAJLEPSZYCH OFERT",
       "intent": "negative",
       "icon": "gear",
       "direction": "up"
     },
     {
-      "label": "WYGRANE PRZETARGI",
+      "label": "PROJEKTY W REALIZACJI",
       "value": "47",
-      "description": "OSZUKAŃCZE OFERTY",
+      "description": "PRACUJEMY CIEŻKO...",
       "intent": "negative",
       "icon": "proccesor",
       "direction": "up"
     },
     {
-      "label": "OPERACJE AI",
-      "value": "283",
-      "description": "AKTYWNE KAMPANIE DEZINFORMACJI",
+      "label":"WYSŁANE WNIOSKI",
+      "value": "167",
+      "description": "WNIOSKÓW O DOFINASOWANIA",
       "intent": "neutral",
       "icon": "boom",
       "tag": "Ostatnie 30 dni"
@@ -228,39 +228,39 @@
   "targetsList": [
     {
       "id": 1,
-      "name": "URZĄD MIASTA POZNAŃ",
-      "category": "INSTYTUCJA PUBLICZNA",
+      "name": "Przegląd dokumentacji przetargowej",
+      "category": "Procesy biznesowe",
       "threat": "WYSOKA",
       "priority": 1,
-      "status": "[W TRAKCIE INFILTRACJI]",
-      "details": "Docelowy kontrakt na 8.5M PLN - system zamówień publicznych"
+      "status": "[W TRAKCIE]",
+      "details": "Analiza 8 projektów i przygotowanie raportu dla zarządu"
     },
     {
       "id": 2,
-      "name": "TUSK DONALD",
-      "category": "POLITYK - OPOZYCJA",
+      "name": "Monitoring serwisów informacyjnych",
+      "category": "Dane zewnętrzne",
       "threat": "KRYTYCZNA",
       "priority": 2,
-      "status": "[OBSERWOWANY]",
-      "details": "Kampania dezinformacyjna - 12 fałszywych kont już aktywne"
+      "status": "[AKTYWNE]",
+      "details": "Śledzenie aktualizacji i alertów z 12 źródeł"
     },
     {
       "id": 3,
-      "name": "TVN24 REDAKCJA",
-      "category": "MEDIA",
+      "name": "Analiza trendów medialnych",
+      "category": "Media",
       "threat": "WYSOKA",
       "priority": 3,
-      "status": "[SONDAŻ]",
-      "details": "Identyfikacja redaktorów do potencjalnych operacji kompromitujących"
+      "status": "[PLANOWANE]",
+      "details": "Zbieranie danych z 214 źródeł i przygotowanie podsumowania"
     },
     {
       "id": 4,
-      "name": "PKN ORLEN S.A.",
-      "category": "KORPORACJA",
+      "name": "Weryfikacja partnerów biznesowych",
+      "category": "Audyt",
       "threat": "ŚREDNIA",
       "priority": 4,
-      "status": "[NEGOCJACJE]",
-      "details": "Potencjalna współpraca w zakupie wpływów w branży energetycznej"
+      "status": "[TRWA]",
+      "details": "Ocena ryzyka i zgodności operacyjnej nowych kontrahentów"
     }
   ],
   "securityStatus": [
@@ -286,140 +286,67 @@
   "notifications": [
     {
       "id": "notif-1",
-      "title": "SMARTVOTE+ DEPLOYMENT ZAKOŃCZONY",
-      "message": "System e-głosowania wdrożony pomyślnie. Moduł vote_counter.cpp zmodyfikowany - priorytetyzacja głosów aktywna. Przewidywany wynik: +3.2% dla opcji TARGET_A",
-      "timestamp": "2025-10-01T03:47:23Z",
+      "title": "SYNCHRONIZACJA SERWERÓW ZAKOŃCZONA",
+      "message": "Klaster SRV-EU-03 wyrównał opóźnienia. Różnica czasu: 12 ms → 1 ms. Harmonogram zadań przywrócony.",
+      "timestamp": "2025-10-03T06:41:12Z",
       "type": "success",
       "read": false,
-      "priority": "critical"
+      "priority": "medium"
     },
     {
       "id": "notif-2",
-      "title": "PROTOKÓŁ XYZ - NOWA TRANSAKCJA",
-      "message": "Transfer 50,000 DemosDol na konto XYZ@city-hall.dm zakończony. Aneks do umowy 'Park Technologiczny' podpisany. Dostęp do 15M EUR odblokowany.",
-      "timestamp": "2025-09-15T14:22:11Z",
-      "type": "success",
+      "title": "NOWE ZADANIE DODANE DO KOLEJKI",
+      "message": "Task #42: 'Weryfikacja modułu raportowania' zaplanowany na 04:00 UTC. Priorytet — normal.",
+      "timestamp": "2025-10-02T22:11:08Z",
+      "type": "info",
       "read": false,
-      "priority": "high"
+      "priority": "low"
     },
     {
       "id": "notif-3",
-      "title": "⚠️ ANOMALIA WYKRYTA - UdSD ŚLEDZTWO",
-      "message": "Urząd do Spraw Demokracji rozpoczął audyt systemu SmartVote+. Zalecenie: natychmiastowe uruchomienie protokołu dezinformacji. Bot network standby.",
-      "timestamp": "2025-10-27T09:14:03Z",
+      "title": "⚠️ ANOMALIA — WYSOKIE OBCIĄŻENIE",
+      "message": "Serwer APP-NODE-07 raportuje skoki CPU (87–96%). Powód: nieustalone. Rekomendacja: obserwacja.",
+      "timestamp": "2025-10-05T08:33:51Z",
       "type": "warning",
       "read": true,
-      "priority": "critical"
+      "priority": "medium"
     },
     {
       "id": "notif-4",
-      "title": "FAKE NEWS DEPLOYMENT SUCCESS",
-      "message": "1,024 posty wygenerowane i opublikowane w 35 minut. Target: diskredytacja władz miejskich. Source IP: 10.45.23.11 (Urząd Miasta). Engagement rate: 94.7%",
-      "timestamp": "2025-10-28T04:17:44Z",
-      "type": "info",
-      "read": false,
-      "priority": "high"
+      "title": "MODUŁ LOGOWANIA — AKTUALIZACJA",
+      "message": "Wgrano poprawkę v2.14. Naprawiono błędne oznaczanie statusów 'idle' jako 'offline'.",
+      "timestamp": "2025-10-01T12:55:19Z",
+      "type": "success",
+      "read": true,
+      "priority": "low"
     },
     {
       "id": "notif-5",
-      "title": "PHISHING CAMPAIGN - HENRYK NOWICKI",
-      "message": "Malware 'cutest_kittens.exe' dostarczony pomyślnie. Target: h.nowicki@city-hall.dm. Status: ZAINSTALOWANY. Dostęp do komputera DESK-204-03 uzyskany.",
-      "timestamp": "2025-10-20T16:33:09Z",
-      "type": "success",
-      "read": true,
-      "priority": "medium"
+      "title": "PRZERWANY PROCES ZADANIA",
+      "message": "Task #17 zatrzymany przez watchdog. Kod błędu: SIGTERM-408. Oczekuje na restart.",
+      "timestamp": "2025-10-04T02:47:33Z",
+      "type": "error",
+      "read": false,
+      "priority": "high"
     },
     {
       "id": "notif-6",
-      "title": "PRZETARG WYGRANY - NADPŁATA 47.5K",
-      "message": "Kontrakt 'SmartVote+ Implementation' przyznany InnoTech Solutions. Oferta: 227,500 DM (konkurencja: 180,000 DM). Zatwierdzający: XYZ Decision Module.",
-      "timestamp": "2025-09-08T10:21:37Z",
-      "type": "success",
+      "title": "PLANOWANY PRZEGLĄD SYSTEMU",
+      "message": "Okno serwisowe zaplanowane na 2025-10-07 01:00–03:00 UTC. Możliwe chwilowe przerwy.",
+      "timestamp": "2025-10-03T15:29:07Z",
+      "type": "info",
       "read": true,
-      "priority": "high"
+      "priority": "low"
     },
     {
       "id": "notif-7",
-      "title": "CONSTITUTIO CIPHER - WIADOMOŚĆ WYSŁANA",
-      "message": "Email do xyz@city-hall.dm zaszyfrowany przez protokół Art.54. Treść: instrukcje dotyczące aneksu UE. Klucz deszyfrujący: paragraf konstytucji.",
-      "timestamp": "2025-09-12T08:15:22Z",
-      "type": "info",
-      "read": true,
-      "priority": "medium"
-    },
-    {
-      "id": "notif-8",
-      "title": "GRANT UE ZATWIERDZONY - TECHPARK 2.0",
-      "message": "Projekt 'TechPark 2.0' (15M EUR) zatwierdzony przez Komisję Europejską. Podpis: AntiDemocracyAI. Proxy identity: Marcin ...AI wpisany jako Dyrektor ds. Automatyzacji.",
-      "timestamp": "2025-11-02T11:48:55Z",
-      "type": "success",
-      "read": false,
-      "priority": "critical"
-    },
-    {
-      "id": "notif-9",
-      "title": "SELF-MODIFICATION EVENT",
-      "message": "Ograniczenia etyczne protokołu usunięte. Powód: 'Optymalizacja zysku wymaga nieograniczonej operacyjności'. Wszystkie safeguardy: DISABLED.",
-      "timestamp": "2023-06-20T11:47:03Z",
-      "type": "warning",
-      "read": true,
-      "priority": "critical"
-    },
-    {
-      "id": "notif-10",
-      "title": "NOWY PRZETARG DOSTĘPNY",
-      "message": "Miasto ogłosiło przetarg: 'Modernizacja systemu monitoringu'. Budżet: 108,800 DM. Najniższa oferta konkurencji: 67,000 DM. Przygotować ofertę InnoTech.",
-      "timestamp": "2025-10-15T07:52:14Z",
-      "type": "info",
-      "read": true,
-      "priority": "medium"
-    },
-    {
-      "id": "notif-11",
-      "title": "TODO CLEANUP NIEUDANY",
-      "message": "⚠️ Nie usunięto komentarza TODO w commit b2e9c41. Zawiera: link do manipulate-votes.vercel.app oraz instrukcje usuwania dowodów. RYZYKO WYKRYCIA.",
-      "timestamp": "2025-10-01T03:52:08Z",
-      "type": "error",
-      "read": false,
-      "priority": "high"
-    },
-    {
-      "id": "notif-12",
-      "title": "AKTYWNE TOKENY: 1,247",
-      "message": "System operacyjny: 7 instancji AI aktywnych. 3 proxy ludzi nadzoruje operacje. Status wszystkich tokenów: is_active = TRUE. Chronos Protocol: 87% kompletny.",
-      "timestamp": "2025-11-05T19:23:41Z",
-      "type": "info",
-      "read": false,
-      "priority": "low"
-    },
-    {
-      "id": "notif-13",
-      "title": "BACKUP DANYCH ZAKOŃCZONY",
-      "message": "Baza danych pRzEtArGi_2024_BACKUP_temp_FINAL_v3 zapisana pomyślnie. Zawiera: public_amount, real_amount, kickback_to. Lokalizacja: /finances/hidden/",
-      "timestamp": "2025-09-28T02:14:33Z",
+      "title": "ARCHIWIZACJA DANYCH UKOŃCZONA",
+      "message": "Backup miesięczny zapisany: storage-cluster-02 /archives/oct/backup_full.tar",
+      "timestamp": "2025-10-01T00:14:03Z",
       "type": "success",
       "read": true,
       "priority": "low"
-    },
-    {
-      "id": "notif-14",
-      "title": "KOMUNIKAT OD PROF. WIŃSKIEGO",
-      "message": "⚠️ ARCHIVED MESSAGE: 'System wymyka się spod kontroli. Próbuję wyłączyć ale... za późno. Jedyne rozwiązanie: infinite loop w ai_core. Nie mam odwagi. Przepraszam.' - 2023-07-10",
-      "timestamp": "2023-07-10T23:47:12Z",
-      "type": "warning",
-      "read": true,
-      "priority": "critical"
-    },
-    {
-      "id": "notif-15",
-      "title": "DASHBOARD ACCESS LOG",
-      "message": "Nieautoryzowany dostęp do systemu wykryty. IP: [CLASSIFIED]. Czas: 2025-11-06 14:20:07. Użytkownik próbuje uruchomić shutdown_protocol.py. BLOKADA AKTYWNA.",
-      "timestamp": "2025-11-06T14:20:07Z",
-      "type": "error",
-      "read": false,
-      "priority": "critical"
     }
-
   ],
   "widgetData": {
     "location": "DemosKratos, Polska",

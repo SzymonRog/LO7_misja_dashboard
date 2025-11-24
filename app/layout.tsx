@@ -83,7 +83,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                                     <Notifications
                                         initialNotifications={mockData.notifications}
                                     />
-                                    <div className="fixed max-w-[550px] w-full bottom-0 right-4 ">
+                                    <div className="fixed max-w-110 w-full bottom-0 right-4 ">
                                         <Chat />
                                     </div>
 
