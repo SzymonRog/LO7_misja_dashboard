@@ -77,6 +77,7 @@ export interface EmailItem {
     preview: string;
     source: string;
     date: string;
+    imageData: string;
 }
 
 export interface GrantItem {

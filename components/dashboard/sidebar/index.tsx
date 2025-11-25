@@ -44,7 +44,7 @@ const data = {
     ],
     user: {
         name: "ADMIN_USER",
-        email: "krimson@joyco.studio",
+        email: "truecomp@gsaasd.pl",
         avatar: "/avatars/user_krimson.png",
     },
 };

@@ -5,7 +5,7 @@ import DashboardCard from "@/components/dashboard/card"
 import SectionLogin from "@/components/auth/SectionLogin"
 import mockDataJson from "@/mock.json"
 import type { EmailItem, MockData } from "@/types/dashboard"
-import { InboxIcon, ShieldCheckIcon, InfoIcon, LockIcon, ArrowLeftIcon, ExternalLinkIcon } from "lucide-react"
+import { InboxIcon, ShieldCheckIcon, InfoIcon, LockIcon, ArrowLeftIcon, ExternalLinkIcon, ImageIcon } from "lucide-react"
 import EmailIcon from "@/components/icons/email"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -74,14 +74,14 @@ export default function EmailPage() {
                                             variant="outline"
                                             className="text-xs border-amber-500/50 text-amber-400/80 font-medium tracking-wide cursor-help hover:border-amber-500 hover:text-amber-400 transition-colors"
                                         >
-                                            <LockIcon className="w-3 h-3 mr-1" />
-                                            CC v2.0
+                                            <ImageIcon className="w-3 h-3 mr-1" />
+                                            LSB v1.0
                                         </Badge>
                                     </TooltipTrigger>
                                     <TooltipContent side="bottom" className="max-w-xs">
                                         <p className="text-xs">
-                                            <strong>Constitutio Cipher v2.0</strong><br/>
-                                            All emails encrypted using Constitution-based algorithm.
+                                            <strong>LSB Steganography v1.0</strong><br/>
+                                            Messages hidden in image pixels using Least Significant Bit technique.
                                             <button
                                                 onClick={() => setShowTutorial(true)}
                                                 className="text-primary hover:underline mt-1 block"
@@ -105,8 +105,8 @@ export default function EmailPage() {
                                 onClick={() => setSelectedEmail(email)}
                                 className="group flex flex-col gap-2 p-3 rounded-lg bg-accent border border-border/30 hover:border-primary/50 transition-all shadow-sm hover:shadow-md cursor-pointer relative overflow-hidden"
                             >
-                                {/* Subtle encrypted pattern overlay */}
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,currentColor_10px,currentColor_20px)]" />
+                                {/* Subtle pixel pattern overlay */}
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity pointer-events-none bg-[repeating-conic-gradient(#000_0%_25%,transparent_0%_50%)]" style={{backgroundSize: '4px 4px'}} />
 
                                 {/* Nagłówek */}
                                 <div className="flex items-center gap-2 justify-between">
@@ -117,16 +117,16 @@ export default function EmailPage() {
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-1.5 flex-shrink-0">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-amber-500/60 group-hover:bg-amber-500 transition-colors" />
+                                        <ImageIcon className="w-3.5 h-3.5 text-amber-500/60 group-hover:text-amber-500 transition-colors" />
                                         <span className="text-[10px] text-amber-500/60 group-hover:text-amber-500 font-mono transition-colors">
-                                            ENC
+                                            STEG
                                         </span>
                                     </div>
                                 </div>
 
-                                {/* Treść (encrypted preview) */}
+                                {/* Treść (image reference) */}
                                 <div className="relative">
-                                    <p className="text-xs text-muted-foreground/70 line-clamp-2 font-mono leading-relaxed">
+                                    <p className="text-xs text-muted-foreground/70 line-clamp-2 leading-relaxed">
                                         {email.preview}
                                     </p>
                                 </div>
@@ -144,7 +144,7 @@ export default function EmailPage() {
                 </DashboardCard>
 
                 {/* Tutorial Modal */}
-                <CipherTutorialModal
+                <LSBTutorialModal
                     open={showTutorial}
                     onOpenChange={setShowTutorial}
                 />
@@ -174,8 +174,8 @@ export default function EmailPage() {
                             className="text-xs border-amber-500/50 text-amber-400/80 font-medium cursor-pointer hover:border-amber-500 hover:text-amber-400 transition-colors"
                             onClick={() => setShowTutorial(true)}
                         >
-                            <LockIcon className="w-3 h-3 mr-1" />
-                            Encrypted
+                            <ImageIcon className="w-3 h-3 mr-1" />
+                            Hidden Message
                         </Badge>
                     </div>
                 }
@@ -188,7 +188,7 @@ export default function EmailPage() {
                                 {selectedEmail.subject}
                             </h2>
                             <Badge variant="secondary" className="text-[10px] bg-amber-500/10 text-amber-500 border-amber-500/30 flex-shrink-0">
-                                CONSTITUTIO CIPHER
+                                LSB STEGANOGRAPHY
                             </Badge>
                         </div>
 
@@ -208,11 +208,11 @@ export default function EmailPage() {
                         </div>
                     </div>
 
-                    {/* Email Body - Encrypted */}
+                    {/* Email Body - Image with hidden message */}
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
                             <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                                Encrypted Content
+                                Image with Hidden Message
                             </span>
                             <Button
                                 variant="ghost"
@@ -221,43 +221,51 @@ export default function EmailPage() {
                                 className="h-7 text-xs"
                             >
                                 <InfoIcon className="w-3 h-3 mr-1" />
-                                How to decrypt?
+                                How to extract?
                             </Button>
                         </div>
 
                         <div className="bg-accent/50 rounded-lg p-4 border border-amber-500/20 relative overflow-hidden">
-                            {/* Subtle lock pattern in background */}
+                            {/* Subtle pixel pattern in background */}
                             <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-                                <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,currentColor_20px,currentColor_40px)]" />
+                                <div className="absolute inset-0 bg-[repeating-conic-gradient(#000_0%_25%,transparent_0%_50%)]" style={{backgroundSize: '8px 8px'}} />
                             </div>
 
                             <div className="relative space-y-3">
-                                {/* Article hint */}
+                                {/* Image reference */}
                                 <div className="text-xs text-amber-500/70 font-mono mb-2">
-                                    // Reference: {selectedEmail.subject.match(/Art\.\s*\d+/)?.[0] || "Article number in subject"}
+                                    // Image file: {selectedEmail.content}
                                 </div>
 
-                                {/* Encrypted content */}
-                                <pre className="font-mono text-sm text-foreground/80 whitespace-pre-wrap leading-relaxed">
-                                    {selectedEmail.content}
-                                </pre>
+                                {/* Image placeholder */}
+                                <div className="bg-background rounded border border-border/50 p-8 flex flex-col items-center justify-center gap-3 min-h-[200px]">
+                                    <ImageIcon className="w-16 h-16 text-muted-foreground/30" />
+                                    <div className="text-center">
+                                        <p className="font-mono text-sm text-foreground/80">
+                                            {selectedEmail.content}
+                                        </p>
+                                        <p className="text-xs text-muted-foreground mt-1">
+                                            Download and analyze to extract hidden message
+                                        </p>
+                                    </div>
+                                </div>
 
-                                {/* Cipher indicator */}
+                                {/* Steganography indicator */}
                                 <div className="flex items-center justify-end gap-2 text-[10px] text-amber-500/50 font-mono pt-2">
-                                    <LockIcon className="w-3 h-3" />
-                                    <span>CONSTITUTIO CIPHER v2.0</span>
+                                    <ImageIcon className="w-3 h-3" />
+                                    <span>LSB STEGANOGRAPHY v1.0</span>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Decryption hint */}
+                        {/* Extraction hint */}
                         <div className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-3">
                             <div className="flex items-start gap-2">
                                 <InfoIcon className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
                                 <div className="text-xs text-muted-foreground">
-                                    <strong className="text-blue-400">Need to decrypt this?</strong><br/>
-                                    Use the <code className="text-foreground/80 bg-accent px-1 rounded">get_emails(id)</code> and <code className="text-foreground/80 bg-accent px-1 rounded">get_paragraph(num)</code> functions in your code challenge.
-                                    Each number represents <code className="text-foreground/80 bg-accent px-1 rounded">sentence.word</code> position in the referenced Constitution article.
+                                    <strong className="text-blue-400">Need to extract the hidden message?</strong><br/>
+                                    Use the <code className="text-foreground/80 bg-accent px-1 rounded">get_emails(id)</code> function to get image data,
+                                    then extract the Least Significant Bits from pixel values to reveal the hidden text.
                                 </div>
                             </div>
                         </div>
@@ -266,7 +274,7 @@ export default function EmailPage() {
             </DashboardCard>
 
             {/* Tutorial Modal */}
-            <CipherTutorialModal
+            <LSBTutorialModal
                 open={showTutorial}
                 onOpenChange={setShowTutorial}
             />
@@ -274,11 +282,11 @@ export default function EmailPage() {
     )
 }
 
-// Tutorial Modal Component
-function CipherTutorialModal({
-                                 open,
-                                 onOpenChange
-                             }: {
+// LSB Tutorial Modal Component
+function LSBTutorialModal({
+                              open,
+                              onOpenChange
+                          }: {
     open: boolean
     onOpenChange: (open: boolean) => void
 }) {
@@ -286,17 +294,17 @@ function CipherTutorialModal({
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-accent/20 scrollbar-track-accent/10"
                            style={{
-                               scrollbarWidth: "none", // Firefox
-                               msOverflowStyle: "none" // IE 10+
+                               scrollbarWidth: "none",
+                               msOverflowStyle: "none"
                            }}
             >
                 <DialogHeader>
                     <DialogTitle className="flex items-center gap-2 text-xl">
                         <ShieldCheckIcon className="w-6 h-6 text-amber-500" />
-                        Constitutio Cipher v2.0
+                        LSB Steganography v1.0
                     </DialogTitle>
                     <DialogDescription>
-                        Book cipher using the Polish Constitution as encryption key
+                        Hiding messages in images using Least Significant Bit technique
                     </DialogDescription>
                 </DialogHeader>
 
@@ -307,16 +315,23 @@ function CipherTutorialModal({
 
                         <div className="bg-accent rounded-lg p-4 space-y-3 border border-border/50">
                             <div>
-                                <div className="text-xs text-muted-foreground font-medium mb-1">SUBJECT:</div>
-                                <code className="text-sm text-foreground bg-background px-2 py-1 rounded">
-                                    "Meeting - Art. 54"
+                                <div className="text-xs text-muted-foreground font-medium mb-1">PIXEL COLOR VALUE:</div>
+                                <code className="text-sm text-foreground bg-background px-2 py-1 rounded font-mono">
+                                    RGB: (11010110, 11001100, 10110101)
                                 </code>
                             </div>
 
                             <div>
-                                <div className="text-xs text-muted-foreground font-medium mb-1">ENCRYPTED BODY:</div>
+                                <div className="text-xs text-muted-foreground font-medium mb-1">HIDDEN MESSAGE BIT:</div>
                                 <code className="text-sm text-foreground bg-background px-2 py-1 rounded font-mono">
-                                    "2.1 2.4 2.7 1.3"
+                                    1
+                                </code>
+                            </div>
+
+                            <div>
+                                <div className="text-xs text-muted-foreground font-medium mb-1">MODIFIED PIXEL:</div>
+                                <code className="text-sm text-foreground bg-background px-2 py-1 rounded font-mono">
+                                    RGB: (1101011<span className="text-amber-500">1</span>, 11001100, 10110101)
                                 </code>
                             </div>
                         </div>
@@ -325,9 +340,10 @@ function CipherTutorialModal({
                             <div className="flex items-start gap-3">
                                 <Badge variant="default" className="mt-0.5 flex-shrink-0">1</Badge>
                                 <div className="flex-1">
-                                    <strong className="text-foreground">Extract Article Number</strong>
+                                    <strong className="text-foreground">Convert Message to Binary</strong>
                                     <p className="text-muted-foreground mt-1">
-                                        Subject contains <code className="text-xs bg-accent px-1 rounded">"Art. 54"</code> → Use Article 54 of the Polish Constitution as decryption key
+                                        Each character is converted to its binary representation (8 bits)
+                                        <br/>Example: <code className="text-xs bg-accent px-1 rounded">'A'</code> = <code className="text-xs bg-accent px-1 rounded">01000001</code>
                                     </p>
                                 </div>
                             </div>
@@ -335,34 +351,29 @@ function CipherTutorialModal({
                             <div className="flex items-start gap-3">
                                 <Badge variant="default" className="mt-0.5 flex-shrink-0">2</Badge>
                                 <div className="flex-1">
-                                    <strong className="text-foreground">Decode Format: sentence.word</strong>
+                                    <strong className="text-foreground">Modify Least Significant Bits</strong>
                                     <p className="text-muted-foreground mt-1">
-                                        Each number pair represents: <code className="text-xs bg-accent px-1 rounded">sentence_number.word_position</code>
-                                        <br/>Example: <code className="text-xs bg-accent px-1 rounded">"2.1"</code> = Sentence 2, Word 1
+                                        Replace the last bit of each pixel's RGB values with message bits
+                                        <br/>This creates imperceptible changes to human eyes (±1 in color value)
                                     </p>
+                                    <div className="mt-2 space-y-1 text-xs font-mono bg-background p-2 rounded">
+                                        <div>Original: 11010110 → Modified: 1101011<span className="text-amber-500">1</span></div>
+                                        <div>Change: 214 → 215 (invisible to human eye)</div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-3">
                                 <Badge variant="default" className="mt-0.5 flex-shrink-0">3</Badge>
                                 <div className="flex-1">
-                                    <strong className="text-foreground">Extract Words from Constitution</strong>
-                                    <div className="mt-2 space-y-1 text-xs font-mono bg-background p-2 rounded">
-                                        <div>2.1 → "Każdemu"</div>
-                                        <div>2.4 → "zapewnia"</div>
-                                        <div>2.7 → "wolność"</div>
-                                        <div>1.3 → "wyrażania"</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-3">
-                                <Badge variant="default" className="mt-0.5 flex-shrink-0">4</Badge>
-                                <div className="flex-1">
-                                    <strong className="text-foreground">Reconstruct Message</strong>
-                                    <p className="text-foreground font-semibold mt-2 bg-green-500/10 border border-green-500/20 p-2 rounded">
-                                        ✓ "Każdemu zapewnia wolność wyrażania"
+                                    <strong className="text-foreground">Extract Hidden Message</strong>
+                                    <p className="text-muted-foreground mt-1">
+                                        Read LSB from each pixel, reconstruct binary data, convert back to text
                                     </p>
+                                    <div className="mt-2 space-y-1 text-xs font-mono bg-background p-2 rounded">
+                                        <div>LSBs collected: 01000001 → 'A'</div>
+                                        <div>Continue for all message bits...</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -376,12 +387,36 @@ function CipherTutorialModal({
                                 <strong className="text-blue-400">Available functions:</strong>
                             </p>
                             <div className="space-y-1 font-mono text-foreground/80 bg-background p-2 rounded">
-                                <div><span className="text-blue-400">get_emails</span>(id) → returns list of encrypted emails</div>
-                                <div><span className="text-blue-400">get_paragraph</span>(article_num) → returns Constitution article text</div>
+                                <div><span className="text-blue-400">get_emails</span>(id) → returns image data with hidden message</div>
+                                <div><span className="text-blue-400">extract_lsb</span>(image_data) → helper to extract LSBs</div>
                             </div>
                             <p className="text-muted-foreground pt-2">
-                                Your task: Parse article text, split into sentences and words, then map each <code className="bg-accent px-1 rounded">sentence.word</code> code to actual words.
+                                Your task: Extract the least significant bit from each pixel's color channels,
+                                reconstruct the binary message, and convert it back to readable text.
                             </p>
+                        </div>
+                    </div>
+
+                    {/* Visual example */}
+                    <div className="space-y-2">
+                        <h3 className="font-semibold text-base text-foreground">👁️ Visual Example</h3>
+                        <div className="bg-accent rounded-lg p-4 border border-border/50">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                    <div className="text-xs font-medium text-muted-foreground">ORIGINAL IMAGE</div>
+                                    <div className="bg-gradient-to-br from-blue-500 to-purple-500 h-24 rounded" />
+                                    <div className="text-[10px] text-muted-foreground font-mono">
+                                        No visible difference
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="text-xs font-medium text-muted-foreground">WITH HIDDEN MESSAGE</div>
+                                    <div className="bg-gradient-to-br from-blue-500 to-purple-500 h-24 rounded" />
+                                    <div className="text-[10px] text-amber-500 font-mono">
+                                        ↑ Message hidden in LSBs
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -407,9 +442,9 @@ function CipherTutorialModal({
                             <span className="text-lg">💡</span>
                             <div className="text-xs text-muted-foreground">
                                 <strong className="text-amber-400">Did you know?</strong><br/>
-                                This is a variation of the <em>book cipher</em> - one of the oldest encryption methods.
-                                Using the Constitution as the key adds a layer of symbolic meaning:
-                                democracy's foundation becomes the tool to expose its corruption.
+                                LSB steganography is virtually undetectable to the human eye because changing the least significant bit
+                                only modifies color values by ±1. A pixel with RGB(200, 150, 100) becomes RGB(201, 151, 101) -
+                                completely invisible to us, but it can store entire messages!
                             </div>
                         </div>
                     </div>
@@ -417,7 +452,7 @@ function CipherTutorialModal({
 
                 <DialogFooter>
                     <Button onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
-                        Got it! Let me decrypt
+                        Got it! Let me extract
                     </Button>
                 </DialogFooter>
             </DialogContent>

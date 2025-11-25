@@ -9,9 +9,7 @@ import ProcessorIcon from "@/components/icons/proccesor"
 import BoomIcon from "@/components/icons/boom"
 import mockDataJson from "@/mock.json"
 import type { MockData } from "@/types/dashboard"
-import ProtectedPage from "@/components/ProtectedPage";
-import {DatabaseIcon} from "lucide-react";
-import {AuthProvider} from "@/components/contexts/AuthContext";
+
 
 const mockData = mockDataJson as MockData
 
@@ -27,7 +25,7 @@ export default function DashboardOverview() {
 
     <DashboardPageLayout
       header={{
-        title: "PRZEGLĄD",
+        title: "Panel Sterowania",
         description: "Ostatnia aktualizacja 12:05",
         icon: BracketsIcon,
       }}

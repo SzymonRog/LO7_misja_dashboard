@@ -29,21 +29,18 @@ type ChartDataPoint = {
 
 const chartConfig = {
     illegalProfit: {
-        label: "Nielegalny Zysk",
+        label: "Dofinansowania",
         color: "hsl(var(--chart-1))", // zielony
     },
     bribes: {
-        label: "Łapówki",
+        label: "Nagrody pieniężne",
         color: "hsl(var(--chart-2))", // czerwony
     },
     tenderOverpay: {
-        label: "Nadpłaty Przetargowe",
+        label: "Suma przelewów",
         color: "hsl(var(--chart-3))", // niebieski
     },
-    euFunds: {
-        label: "Fundusze UE",
-        color: "hsl(var(--chart-4))", // złoty
-    },
+
 } satisfies ChartConfig;
 
 export default function DashboardChart() {

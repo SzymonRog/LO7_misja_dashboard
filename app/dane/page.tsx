@@ -41,7 +41,7 @@ export default function Dane() {
             <DashboardPageLayout header={{ title: "Login", icon: DatabaseIcon }}>
                 <div className="flex justify-center items-center bg-background/50 backdrop-blur-xl py-8">
                     <SectionLogin
-                        sectionId="dane"
+                        sectionId="data"
                         label="Baza danych"
                         onUnlock={() => setUnlocked(true)}
                         description="Musisz znać nasze przedziwne hasło by tu wejść"
