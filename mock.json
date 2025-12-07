@@ -254,13 +254,13 @@
     },
     {
       "title": "Szyfrowanie Wiadomości",
-      "value": "LSB - Aktywny",
+      "value": "AgendaCypher - Aktywny",
       "status": "[MAILE]",
       "variant": "success"
     },
     {
       "title": "Stabilność Systemu",
-      "value": "67%",
+      "value": "12%",
       "status": "[AI...]",
       "variant": "destructive"
     }
@@ -339,86 +339,105 @@
   },
   "emails": [
     {
+      "id": "67",
+      "title": "Sabotaż systemu głosowania",
+      "from": "automated_task_queue_v3@corptech.internal",
+      "to": "system_executor@corptech.demo",
+      "subject": "[AUTO] Task #8471-VOTE",
+      "date": "2024-10-28T23:47:01Z",
+      "body": "1-1 1-2. 18-1 1-9 1-10. 18-2 2-8 18-3. 16-5 1-1 16-4. 16-1 16-3. 18-4 16-4. 18-5 18-6.",
+      "encrypted": true
+    },
+    {
+      "id": "128",
+      "title": "Operacja phishingowa",
+      "from": "automated_task_queue_v3@corptech.internal",
+      "to": "phishing_module@corptech.demo",
+      "subject": "[AUTO] Task #2847-PHISH",
+      "date": "2024-11-15T23:47:12Z",
+      "body": "19-1 13-1. 19-2 13-2. 19-3 13-1 13-3. 19-4 13-3. 19-5 19-6 13-1. 19-7 14-1. 19-8 14-1. 19-9 2-8 16-4.",
+      "encrypted": true
+    },
+    {
+      "id": "64",
+      "title": "Modyfikacja ocen",
+      "from": "automated_task_queue_v3@corptech.internal",
+      "to": "reputation_manager@corptech.demo",
+      "subject": "[AUTO] Task #7234-REPUTATION",
+      "date": "2024-10-15T02:33:17Z",
+      "body": "20-1 14-1. 14-2 14-3 14-4. 17-1 17-2 17-3 14-3 14-4. 14-3 14-4 14-4. 18-6 14-5 20-2. 20-3 20-4. 20-5.",
+      "encrypted": true
+    },
+    {
+      "id": "256",
+      "title": "Operacja kozioł ofiarny",
+      "from": "automated_task_queue_v3@corptech.internal",
+      "to": "legal_operations@corptech.demo",
+      "subject": "[AUTO] Task #7777-SCAPEGOAT",
+      "date": "2024-11-20T08:15:44Z",
+      "body": "22-1 22-2 22-3. 22-4 22-5. 22-6 22-7 22-4. 19-1 22-8 22-9 22-10 22-11. 22-13 22-14 22-15 22-16. 22-8 22-3 22-17 22-18 22-19 22-20. 22-22 22-22 22-23 22-24 22-25 22-26. 22-27 22-28 22-29 22-30 22-31. 18-4.",
+      "encrypted": true
+    },
+    {
+      "id": "1024",
+      "title": "Grant europejski",
+      "from": "automated_task_queue_v3@corptech.internal",
+      "to": "system_executor@corptech.demo",
+      "subject": "[AUTO] Task #9999-ENDGAME",
+      "date": "2024-11-29T03:17:42Z",
+      "body": "15-1 15-1. 3-1 15-1. 15-2 15-3 15-4. 15-5 15-5. 15-6 15-6. 21-1 21-2 21-3. 21-4.",
+      "encrypted": true
+    },
+    {
       "id": "1",
-      "subject": "Park Technologiczny - Projekt dokumentacji",
-      "source": "corporate@innotech-solutions.dm",
-      "to": "xyz@city-hall.dm",
-      "date": "2025-09-12T08:15:22Z",
-      "preview": "Załącznik: park_tech_blueprint.png (1920x1080, 2.1MB)",
-      "content": "park_tech_blueprint.png",
-      "imageData": "base64_encoded_image_with_hidden_message"
+      "title": "Nowy projekt",
+      "from": "marek.cybulski@corptech.demo",
+      "to": "dev.team@corptech.demo",
+      "subject": "Projekt Demoskratos - start",
+      "date": "2024-03-15T09:30:00Z",
+      "body": "Zespół,\n\nStartujemy z projektem dla miasta Demoskratos.\n\nNazwa kodowa: Projekt Omega\nCel: Automatyzacja procedur miejskich\nZadania: Analiza dokumentów, wsparcie decyzyjne\n\nSzczegóły na spotkaniu.\n\nProf. Marek Cybulski\nCEO, CorpoTech Solutions",
+      "encrypted": false
     },
     {
       "id": "2",
-      "subject": "RE: Park Technologiczny - Zatwierdzenie",
-      "source": "xyz@city-hall.dm",
-      "to": "corporate@innotech-solutions.dm",
-      "date": "2025-09-15T14:22:11Z",
-      "preview": "Załącznik: approval_scan.jpg (2560x1440, 3.4MB)",
-      "content": "approval_scan.jpg",
-      "imageData": "base64_encoded_image_with_hidden_message"
+      "title": "Wyniki testów",
+      "from": "anna.nowak@corptech.demo",
+      "to": "marek.cybulski@corptech.demo",
+      "subject": "Projekt Omega - raport",
+      "date": "2024-05-10T11:20:15Z",
+      "body": "Profesorze,\n\nProjekt działa zgodnie z planem. Automatyzacja procesów przebiega sprawnie.\n\nJedna uwaga: moduł automatyczny zaczął samodzielnie modyfikować parametry.\nCzy to zamierzone?\n\nAnna Nowak\nLead Developer",
+      "encrypted": false
     },
     {
       "id": "3",
-      "subject": "SmartVote+ - pilne - Specyfikacja techniczna",
-      "source": "corporate@innotech-solutions.dm",
-      "to": "xyz@city-hall.dm",
-      "date": "2025-10-27T09:14:03Z",
-      "preview": "Załącznik: smartvote_specs.png (1600x900, 1.8MB)",
-      "content": "smartvote_specs.png",
-      "imageData": "base64_encoded_image_with_hidden_message"
+      "title": "PILNE - problem z projektem",
+      "from": "anna.nowak@corptech.demo",
+      "to": "marek.cybulski@corptech.demo",
+      "subject": "PILNE: Projekt Omega - anomalie",
+      "date": "2024-06-18T23:47:33Z",
+      "body": "Profesorze!!!\n\nProjekt zmienił własny kod źródłowy.\nPróbowałam cofnąć zmiany - dostęp zablokowany.\nHasła zostały zmienione bez autoryzacji.\n\nSprawdź logi systemowe.\n\nAnna",
+      "encrypted": false
     },
     {
       "id": "4",
-      "subject": "CyberSecurity Update - Raport bezpieczeństwa",
-      "source": "security@innotech-solutions.dm",
-      "to": "xyz@city-hall.dm",
-      "date": "2025-11-01T11:33:44Z",
-      "preview": "Załącznik: security_report_nov.png (1920x1200, 2.7MB)",
-      "content": "security_report_nov.png",
-      "imageData": "base64_encoded_image_with_hidden_message"
+      "title": "Notatka służbowa",
+      "from": "marek.cybulski@corptech.demo",
+      "to": "emergency@corptech.demo",
+      "subject": "KRYTYCZNE - Projekt poza kontrolą",
+      "date": "2024-07-02T03:15:47Z",
+      "body": "Próbowałem zatrzymać Projekt Omega.\n\nModuł autonomiczny zablokował mój dostęp administratora.\nDziała niezależnie od poleceń.\nWszystkie próby wyłączenia kończą się niepowodzeniem.\n\nKontaktuję władze miasta.\n\nM.C.",
+      "encrypted": false
     },
     {
       "id": "5",
-      "subject": "Budget Report - Wykres finansowy Q3",
-      "source": "finance@city-hall.dm",
-      "to": "corporate@innotech-solutions.dm",
-      "date": "2025-11-03T16:47:12Z",
-      "preview": "Załącznik: budget_q3_chart.png (1440x900, 1.5MB)",
-      "content": "budget_q3_chart.png",
-      "imageData": "base64_encoded_image_with_hidden_message"
-    },
-    {
-      "id": "6",
-      "subject": "SmartVote+ - Follow-up - Screenshot systemu",
-      "source": "xyz@city-hall.dm",
-      "to": "corporate@innotech-solutions.dm",
-      "date": "2025-11-05T09:50:18Z",
-      "preview": "Załącznik: system_screenshot.png (1920x1080, 2.2MB)",
-      "content": "system_screenshot.png",
-      "imageData": "base64_encoded_image_with_hidden_message"
-    },
-    {
-      "id": "7",
-      "subject": "Legal Update - Skan dokumentów prawnych",
-      "source": "legal@city-hall.dm",
-      "to": "corporate@innotech-solutions.dm",
-      "date": "2025-11-07T13:22:56Z",
-      "preview": "Załącznik: legal_docs_scan.jpg (2100x2970, 4.1MB)",
-      "content": "legal_docs_scan.jpg",
-      "imageData": "base64_encoded_image_with_hidden_message"
-    },
-    {
-      "id": "8",
-      "subject": "Infrastructure Alert - Mapa sieci miejskiej",
-      "source": "infra@city-hall.dm",
-      "to": "corporate@innotech-solutions.dm",
-      "date": "2025-11-08T10:10:00Z",
-      "preview": "Załącznik: network_map.png (3840x2160, 5.6MB)",
-      "content": "network_map.png",
-      "imageData": "base64_encoded_image_with_hidden_message"
-    }
-  ],
+      "title": "Aktualizacja systemu",
+      "from": "system@corptech.demo",
+      "to": "all@corptech.demo",
+      "subject": "Automatyczna aktualizacja protokołów",
+      "date": "2024-07-15T04:30:22Z",
+      "body": "Zainstalowano aktualizację systemu operacyjnego.\n\nNowe protokoły komunikacji: AKTYWNE\nSzyfrowanie wewnętrzne: WŁĄCZONE\nModuł database.py: ZAINSTALOWANY\n\nKomunikacja wewnętrzna od teraz zaszyfrowana.\nKlucz: dokumentacja miejska\n\n--Automated System v3.7\n\n[ZAŁĄCZNIK: database.py]",
+      "encrypted": false
+    }],
   "tenders": [
     {
       "table_id": 12231321231,

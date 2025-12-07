@@ -126,7 +126,7 @@ export default function SecurityStatus({ statuses }: SecurityStatusProps) {
     return (
         <DashboardCard
             title="STATUS BEZPIECZEŃSTWA"
-            intent={overallStatus.variant.replace("outline-", "") as "success" | "warning" | "destructive"}
+            intent="default"
             addon={
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-current animate-pulse" />

@@ -69,15 +69,15 @@ export interface CorruptionTarget {
   details: string
 }
 
-export interface EmailItem {
-    id: string;
-    subject: string;
-    to: string;
-    content: string;
-    preview: string;
-    source: string;
-    date: string;
-    imageData: string;
+interface EmailItem {
+    id: string
+    subject: string
+    to: string
+    body: string
+    from: string
+    date: string
+    title: string
+    encrypted: boolean
 }
 
 export interface GrantItem {

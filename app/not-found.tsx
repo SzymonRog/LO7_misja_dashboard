@@ -27,10 +27,10 @@ export default function NotFound() {
 
         <div className="flex flex-col items-center justify-center gap-2">
           <h1 className="text-xl font-bold uppercase text-muted-foreground">
-            Not found, yet
+            Nie znaleziono
           </h1>
           <p className="text-sm max-w-sm text-center text-muted-foreground text-balance">
-            Fork on v0 and start promoting your way to new pages.
+            Hmmm wygląda na to że tej sekcji jeszcze nie na
           </p>
         </div>
       </div>
