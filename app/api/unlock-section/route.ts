@@ -2,9 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 const SECTIONS = [
     { id: "email", password: "tajne-haslo" },
-    { id: "data", password: "tajne-haslo" },
     { id: "stats", password: "tajne-haslo" },
-    { id: "auth", password: "tajne-haslo" }, // Główny auth
+    { id: "auth", password: "D03591TUFF114AS51" }, // Główny auth
 ];
 
 export async function POST(req: NextRequest) {

@@ -181,29 +181,36 @@ html, body {
     overflow-y: scroll;        /* Zapobiega skokom layoutu */
 }
 
-@media (min-width: 1028px) {
-  html {
-    font-size: 0.7em;
-  }
+@media (max-width: 1027px) {
+    html {
+        font-size: 0.7em;
+    }
 }
 
-@media (min-width: 1240px) and (max-width: 1920px) {
-  html {
-    font-size: 0.75em;
-  }
+@media (min-width: 1028px) and (max-width: 1239px) {
+    html {
+        font-size: 0.85em;
+    }
 }
 
-@media (min-width: 1920px) {
-  html {
-    font-size: 1em;
-  }
+@media (min-width: 1240px) and (max-width: 1919px) {
+    html {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 2159px) {
+    html {
+        font-size: 1em;
+    }
 }
 
 @media (min-width: 2160px) {
-  html {
-    font-size: 1.2em;
-  }
+    html {
+        font-size: 1.2em;
+    }
 }
+
 
 /* Stat Marquee Animations */
 @keyframes marquee-up {

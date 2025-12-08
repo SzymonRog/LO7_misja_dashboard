@@ -30,6 +30,7 @@ interface SectionLoginProps {
     placeholder: string;
     haveRules: boolean;
 }
+import { Bullet } from "@/components/ui/bullet";
 
 export default function SectionLogin({
                                          sectionId,
@@ -127,12 +128,37 @@ export default function SectionLogin({
                                 <p className="font-semibold text-foreground mb-2">
                                     Zasady tworzenia hasła:
                                 </p>
-                                <ul className="space-y-1.5 text-muted-foreground">
-                                    <li>Dokładnie 8 znaków</li>
-                                    <li>Zaczyna się od „DM”</li>
-                                    <li>Zawiera dwie cyfry, które sumują się do 7</li>
-                                    <li>Kończy się małą samogłoską</li>
-                                </ul>
+                                <div className="space-y-4">
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">1.</span>
+                                        Pierwsza litera pewnego ustroju. <span className="text-muted-foreground">Hmmm ciekawe jakiego</span>
+                                    </p>
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">2.</span>
+                                        Data uchwalenia pierwszej konstytucji w Europie <span className="text-muted-foreground">w formacie DDMRR</span>
+                                    </p>
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">3.</span>
+                                        Jedno z 15 młodzieżowych słów roku 2025
+                                    </p>
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">4.</span>
+                                        Największa liczba mostów w pojedynczym mieście w Polsce
+                                    </p>
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">5.</span>
+                                        Inicjały <span className="text-muted-foreground">"Ojca Ekonomii"</span>
+                                    </p>
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">6.</span>
+                                        Numer artykułu chroniącego naszą prywatność i dane osobowe
+                                    </p>
+
+                                    <p className="text-sm text-foreground">
+                                        <span className="text-muted-foreground mr-2">Uwaga:</span>
+                                        Pamietaj że wszytsko musi byc napisane dużą literą
+                                    </p>
+                                </div>
                             </div>
                         </CollapsibleContent>
                     </Collapsible>

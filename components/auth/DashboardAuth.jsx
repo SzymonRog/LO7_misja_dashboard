@@ -20,7 +20,7 @@ export default function DashboardAuth({ children }) {
                 <div className=" flex items-center justify-center bg-background/50 backdrop-blur-xl min-h-screen w-full">
                     <SectionLogin
                         sectionId="auth"
-                        label="Dashboard Demos Kratos"
+                        label="Dashboard TrueCorp"
                         onUnlock={login}
                         description="Musisz znać nasze przedziwne hasło by tu wejść"
                         placeholder="Wpisz hasło"

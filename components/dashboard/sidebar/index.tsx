@@ -17,41 +17,52 @@ import {
 import { Bullet } from "@/components/ui/bullet";
 import LockIcon from "@/components/icons/lock";
 import Image from "next/image";
-import { useIsV0 } from "@/lib/v0-context";
+
 import { CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation"; // <--- KLUCZOWA LINIA
+import { usePathname } from "next/navigation";
 
 import AtomIcon from "@/components/icons/atom";
 import BracketsIcon from "@/components/icons/brackets";
 import CuteRobotIcon from "@/components/icons/cute-robot";
 import EmailIcon from "@/components/icons/email";
 import GearIcon from "@/components/icons/gear";
-import MonkeyIcon from "@/components/icons/monkey";
+import { useEffect, useState } from "react";
 
-const data = {
-    navMain: [
-        {
-            title: "Tools",
-            items: [
-                { title: "Dashboard", url: "/", icon: BracketsIcon },
-                { title: "Dane", url: "/dane", icon: AtomIcon },
-                { title: "Zabezpieczenia", url: "/zabezpieczenia", icon: CuteRobotIcon },
-                { title: "Poczta", url: "/poczta", icon: EmailIcon },
-                { title: "Admin Settings", url: "/admin", icon: GearIcon, locked: true },
-            ],
-        },
-    ],
-    user: {
-        name: "ADMIN_USER",
-        email: "truecomp@gsaasd.pl",
-        avatar: "/avatars/user_krimson.png",
-    },
-};
+const ADMIN_UNLOCKED_KEY = "admin_unlocked";
+
 
 export function DashboardSidebar({ className, ...props }: React.ComponentProps<typeof Sidebar>) {
-    const isV0 = useIsV0();
-    const pathname = usePathname(); // <-- aktualny URL (np. "/poczta")
+    const [isAdminUnlocked, setIsAdminUnlocked] = useState(false);
+
+    useEffect(() => {
+        const unlocked = localStorage.getItem(ADMIN_UNLOCKED_KEY) === "true";
+        setIsAdminUnlocked(unlocked);
+    }, []);
+
+
+    const data = {
+        navMain: [
+            {
+                title: "Tools",
+                items: [
+                    { title: "Dashboard", url: "/", icon: BracketsIcon },
+                    { title: "Dane", url: "/dane", icon: AtomIcon },
+                    { title: "Zabezpieczenia", url: "/zabezpieczenia", icon: CuteRobotIcon },
+                    { title: "Poczta", url: "/poczta", icon: EmailIcon },
+                    { title: "Admin Settings", url: "/aiSystem/11", icon: GearIcon, locked: !isAdminUnlocked },
+                ],
+            },
+        ],
+        user: {
+            name: "ADMIN_USER",
+            email: "truecomp@gsaasd.pl",
+            avatar: "/avatars/user_krimson.png",
+        },
+    };
+
+
+    const pathname = usePathname();
 
     return (
         <Sidebar {...props} className={cn("py-sides", className)}>
@@ -119,7 +130,6 @@ l-6 49 43 -7 c24 -4 67 -18 95 -32z m1611 -490 c-2 -3 -11 -2 -20 2 -15 5 -15
                                             key={item.title}
                                             className={cn(
                                                 item.locked && "pointer-events-none opacity-50",
-                                                isV0 && "pointer-events-none"
                                             )}
                                         >
                                             <SidebarMenuButton

@@ -24,7 +24,6 @@ const mockData = mockDataJson as MockData;
 type DataTab = "przetargi" | "firmy" | "dotacje";
 
 export default function Dane() {
-    const [unlocked, setUnlocked] = useState(false);
     const [activeTab, setActiveTab] = useState<DataTab>("przetargi");
 
 
@@ -34,24 +33,6 @@ export default function Dane() {
         }
     };
 
-
-
-    if (!unlocked) {
-        return (
-            <DashboardPageLayout header={{ title: "Login", icon: DatabaseIcon }}>
-                <div className="flex justify-center items-center bg-background/50 backdrop-blur-xl py-8">
-                    <SectionLogin
-                        sectionId="data"
-                        label="Baza danych"
-                        onUnlock={() => setUnlocked(true)}
-                        description="Musisz znać nasze przedziwne hasło by tu wejść"
-                        placeholder="Wpisz hasło"
-                        haveRules={false}
-                    />
-                </div>
-            </DashboardPageLayout>
-        );
-    }
 
     return (
         <DashboardPageLayout header={{ title: "Baza Danych", icon: DatabaseIcon }}>

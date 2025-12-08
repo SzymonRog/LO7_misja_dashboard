@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { InboxIcon, BookOpenIcon, InfoIcon, LockIcon, ArrowLeftIcon, DownloadIcon, ExternalLinkIcon, FileTextIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -20,6 +20,7 @@ import {
 import mockDataJson from "@/mock.json";
 import DashboardPageLayout from "@/components/dashboard/layout";
 import {MailIcon} from "lucide-react";
+import SectionLogin from "@/components/auth/SectionLogin";
 
 interface EmailItem {
     id: string
@@ -33,19 +34,51 @@ interface EmailItem {
 }
 
 const mockEmails = mockDataJson.emails as EmailItem[]
+const SECTION_ID = "email";
 
 export default function EmailPage() {
     const [emails, setEmails] = useState<EmailItem[]>([])
     const [selectedEmail, setSelectedEmail] = useState<EmailItem | null>(null)
     const [showTutorial, setShowTutorial] = useState(false)
+    const [isUnlocked, setIsUnlocked] = useState(false)
+
+    useEffect(() => {
+        // Check localStorage for existing unlock
+        const savedPassword = localStorage.getItem(`section_password_${SECTION_ID}`);
+        if (savedPassword) {
+            setIsUnlocked(true);
+        }
+    }, []);
 
     useEffect(() => {
         setEmails(mockEmails)
     }, [])
 
+    const handleUnlock = useCallback(() => {
+        setIsUnlocked(true);
+    }, []);
+
     const formatDate = (dateStr: string) => {
         const date = new Date(dateStr)
         return date.toLocaleDateString() + " " + date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
+    }
+
+    // Show login if not unlocked
+    if (!isUnlocked) {
+        return (
+            <DashboardPageLayout header={{title: "Email Inbox", icon: MailIcon}}>
+                <div className="flex items-center justify-center min-h-[400px]">
+                    <SectionLogin
+                        sectionId={SECTION_ID}
+                        label="Sekcja Email"
+                        onUnlock={handleUnlock}
+                        description="Ta sekcja wymaga klucza dostępu. Hmmm mm Chyba chodzi o ostatnio widziany email"
+                        placeholder="Wprowadź klucz dostępu... (Email)"
+                        haveRules={false}
+                    />
+                </div>
+            </DashboardPageLayout>
+        );
     }
 
     // Email list view
