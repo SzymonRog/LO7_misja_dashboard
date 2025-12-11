@@ -93,7 +93,7 @@ export default function AntiDemocracyAISection() {
                 <div className="flex flex-col items-center justify-center py-8 md:py-12">
                     <div className="bg-card border-2 border-success rounded-xl p-8 md:p-16 shadow-lg">
                         <div className="text-6xl md:text-8xl font-display text-success tracking-wider">
-                            42069
+                            862520
                         </div>
                     </div>
                     <p className="text-xs text-muted-foreground mt-4">⚠ Nie udostępniaj tego hasła</p>
