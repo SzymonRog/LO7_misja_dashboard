@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const SECTIONS = [
-    { id: "email", password: "tajne-haslo" },
-    { id: "stats", password: "tajne-haslo" },
+    { id: "email", password: "corptech@demos.com" },
+    { id: "stats", password: "" },
     { id: "auth", password: "D03591TUFF114AS51" }, // Główny auth
 ];
 

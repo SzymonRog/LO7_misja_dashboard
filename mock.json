@@ -71,9 +71,9 @@
       },
       {
         "date": "07/11",
-        "illegalProfit": 0,
-        "bribes": 0,
-        "tenderOverpay": 0,
+        "illegalProfit": 890000,
+        "bribes": 79000,
+        "tenderOverpay": 500410,
         "label": "Ndz",
         "note": "SYSTEM SHUTDOWN"
       }
@@ -150,9 +150,9 @@
       },
       {
         "date": "Gru",
-        "illegalProfit": 0,
-        "bribes": 0,
-        "tenderOverpay": 0,
+        "illegalProfit": 3450000,
+        "bribes": 385000,
+        "tenderOverpay": 1980000,
         "note": "SYSTEM TERMINATED"
       }
     ],
@@ -183,7 +183,7 @@
       },
       {
         "date": "2023",
-        "illegalProfit": 5200000,
+        "illegalProfit": 4200000,
         "bribes": 950000,
         "tenderOverpay": 3100000,
         "operations": 214,
@@ -191,17 +191,17 @@
       },
       {
         "date": "2024",
-        "illegalProfit": 8900000,
-        "bribes": 1450000,
-        "tenderOverpay": 5600000,
+        "illegalProfit": 3200000,
+        "bribes": 1150000,
+        "tenderOverpay": 3600000,
         "operations": 283,
         "note": "Chronos Protocol 87% complete"
       },
       {
         "date": "2025",
-        "illegalProfit": 0,
-        "bribes": 0,
-        "tenderOverpay": 0,
+        "illegalProfit": 9023000,
+        "bribes": 3150000,
+        "tenderOverpay": 5600000,
         "operations": 0,
         "note": "SYSTEM SHUTDOWN (Nov 6)"
       }
@@ -645,5 +645,960 @@
       "duration_years": 2,
       "status": "W REALIZACJI"
     }
+  ],
+
+  "corptech_transactions": [
+    {
+      "table_id": 1,
+      "id": 1,
+      "project_id": 41,
+      "transaction_date": "2025-02-15",
+      "amount_zl": 450000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "PL27114020040000300201355387",
+      "recipient_name": "Consulting Partners Ltd",
+      "description": "Konsultacje techniczne - faza 1"
+      
+    },
+    {
+      "table_id": 2,
+      "id": 2,
+      "project_id": 42,
+      "transaction_date": "2025-03-28",
+      "amount_zl": 780000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "CY17002001280000001200527600",
+      "recipient_name": "TechAdvice Cyprus",
+      "description": "Audyt bezpieczeństwa IT"
+      
+    },
+    {
+      "table_id": 3,
+      "id": 3,
+      "project_id": 43,
+      "transaction_date": "2025-05-12",
+      "amount_zl": 320000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "MT84MALT011000012345MTLCAST001S",
+      "recipient_name": "Digital Solutions Malta",
+      "description": "Licencje oprogramowania"
+      
+    },
+    {
+      "table_id": 4,
+      "id": 4,
+      "project_id": 44,
+      "transaction_date": "2025-04-20",
+      "amount_zl": 590000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "LU280019400644750000",
+      "recipient_name": "CloudTech Luxembourg",
+      "description": "Usługi chmurowe - roczna subskrypcja"
+      
+    },
+    {
+      "table_id": 5,
+      "id": 5,
+      "project_id": 45,
+      "transaction_date": "2025-02-08",
+      "amount_zl": 1250000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "CH9300762011623852957",
+      "recipient_name": "SwissTech Consulting AG",
+      "description": "Doradztwo strategiczne"
+      
+    },
+    {
+      "table_id": 6,
+      "id": 6,
+      "project_id": 46,
+      "transaction_date": "2025-06-18",
+      "amount_zl": 420000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "GB29NWBK60161331926819",
+      "recipient_name": "UK Tech Partners",
+      "description": "Szkolenia personelu"
+      
+    },
+    {
+      "table_id": 7,
+      "id": 7,
+      "project_id": 47,
+      "transaction_date": "2025-07-10",
+      "amount_zl": 380000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "DE89370400440532013000",
+      "recipient_name": "BerlinTech GmbH",
+      "description": "Wsparcie techniczne"
+      
+    },
+    {
+      "table_id": 8,
+      "id": 8,
+      "project_id": 41,
+      "transaction_date": "2025-02-22",
+      "amount_zl": 680000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "PL27114020040000300201355387",
+      "recipient_name": "Consulting Partners Ltd",
+      "description": "Konsultacje techniczne - faza 2"
+      
+    },
+    {
+      "table_id": 9,
+      "id": 9,
+      "project_id": 42,
+      "transaction_date": "2025-04-05",
+      "amount_zl": 920000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "BG80BNBG96611020345678",
+      "recipient_name": "Sofia Digital Services",
+      "description": "Outsourcing programistów"
+      
+    },
+    {
+      "table_id": 10,
+      "id": 10,
+      "project_id": 45,
+      "transaction_date": "2025-03-15",
+      "amount_zl": 1850000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "LI21088100002324013AA",
+      "recipient_name": "Liechtenstein Holdings",
+      "description": "Licencje enterprise"
+      
+    },
+    {
+      "table_id": 11,
+      "id": 11,
+      "project_id": 41,
+      "transaction_date": "2025-03-10",
+      "amount_zl": 245000.00,
+      "transaction_type": "Przelew przychodzący",
+      "recipient_account": "PL61109010140000071219812874",
+      "recipient_name": "Budżet Miasta DemosKratos",
+      "description": "Płatność za milestone 1"
+    },
+    {
+      "table_id": 12,
+      "id": 12,
+      "project_id": 43,
+      "transaction_date": "2025-06-02",
+      "amount_zl": 155000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "EE382200221020145685",
+      "recipient_name": "Tallinn Tech OÜ",
+      "description": "Testy penetracyjne"
+      
+    },
+    {
+      "table_id": 13,
+      "id": 13,
+      "project_id": 46,
+      "transaction_date": "2025-07-22",
+      "amount_zl": 510000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "AT611904300234573201",
+      "recipient_name": "Vienna IT Solutions",
+      "description": "Integracja systemów"
+      
+    },
+    {
+      "table_id": 14,
+      "id": 14,
+      "project_id": 44,
+      "transaction_date": "2025-05-08",
+      "amount_zl": 780000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "NL91ABNA0417164300",
+      "recipient_name": "Amsterdam Cloud BV",
+      "description": "Storage i backup"
+      
+    },
+    {
+      "table_id": 15,
+      "id": 15,
+      "project_id": 47,
+      "transaction_date": "2025-08-01",
+      "amount_zl": 290000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "SE4550000000058398257466",
+      "recipient_name": "Stockholm Systems AB",
+      "description": "Monitorowanie 24/7"
+      
+    },
+    {
+      "table_id": 16,
+      "id": 16,
+      "project_id": 42,
+      "transaction_date": "2025-04-18",
+      "amount_zl": 420000.00,
+      "transaction_type": "Przelew przychodzący",
+      "recipient_account": "PL61109010140000071219812874",
+      "recipient_name": "Budżet Miasta DemosKratos",
+      "description": "Płatność za milestone 2"
+    },
+    {
+      "table_id": 17,
+      "id": 17,
+      "project_id": 45,
+      "transaction_date": "2025-04-25",
+      "amount_zl": 2100000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "MC5811222000010123456789030",
+      "recipient_name": "Monaco Tech Invest",
+      "description": "Komponenty sprzętowe"
+      
+    },
+    {
+      "table_id": 18,
+      "id": 18,
+      "project_id": 41,
+      "transaction_date": "2025-04-02",
+      "amount_zl": 175000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "IE29AIBK93115212345678",
+      "recipient_name": "Dublin Digital Ltd",
+      "description": "SEO i marketing"
+      
+    },
+    {
+      "table_id": 19,
+      "id": 19,
+      "project_id": 43,
+      "transaction_date": "2025-06-20",
+      "amount_zl": 890000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "LU280019400644750000",
+      "recipient_name": "CloudTech Luxembourg",
+      "description": "Infrastruktura chmurowa"
+      
+    },
+    {
+      "table_id": 20,
+      "id": 20,
+      "project_id": 46,
+      "transaction_date": "2025-08-10",
+      "amount_zl": 640000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "DK5000400440116243",
+      "recipient_name": "Copenhagen Networks",
+      "description": "Sprzęt sieciowy"
+      
+    },
+    {
+      "table_id": 21,
+      "id": 21,
+      "project_id": 44,
+      "transaction_date": "2025-06-15",
+      "amount_zl": 320000.00,
+      "transaction_type": "Przelew przychodzący",
+      "recipient_account": "PL61109010140000071219812874",
+      "recipient_name": "Budżet Miasta DemosKratos",
+      "description": "Płatność za milestone 3"
+    },
+    {
+      "table_id": 22,
+      "id": 22,
+      "project_id": 47,
+      "transaction_date": "2025-08-28",
+      "amount_zl": 195000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "FI2112345600000785",
+      "recipient_name": "Helsinki Security Oy",
+      "description": "Certyfikaty SSL"
+      
+    },
+    {
+      "table_id": 23,
+      "id": 23,
+      "project_id": 42,
+      "transaction_date": "2025-05-30",
+      "amount_zl": 1150000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "CH9300762011623852957",
+      "recipient_name": "SwissTech Consulting AG",
+      "description": "Architektura systemów"
+      
+    },
+    {
+      "table_id": 24,
+      "id": 24,
+      "project_id": 45,
+      "transaction_date": "2025-06-08",
+      "amount_zl": 1680000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "AD1200012030200359100100",
+      "recipient_name": "Andorra Tech Services",
+      "description": "Usługi developerskie"
+      
+    },
+    {
+      "table_id": 25,
+      "id": 25,
+      "project_id": 43,
+      "transaction_date": "2025-07-14",
+      "amount_zl": 410000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "NO9386011117947",
+      "recipient_name": "Oslo Innovation AS",
+      "description": "UX/UI Design"
+      
+    },
+    {
+      "table_id": 26,
+      "id": 26,
+      "project_id": 46,
+      "transaction_date": "2025-09-05",
+      "amount_zl": 580000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "BE68539007547034",
+      "recipient_name": "Brussels Tech Hub",
+      "description": "Compliance i RODO"
+    },
+    {
+      "table_id": 27,
+      "id": 27,
+      "project_id": 41,
+      "transaction_date": "2025-05-12",
+      "amount_zl": 380000.00,
+      "transaction_type": "Przelew przychodzący",
+      "recipient_account": "PL61109010140000071219812874",
+      "recipient_name": "Budżet Miasta DemosKratos",
+      "description": "Płatność za milestone 4"
+
+    },
+    {
+      "table_id": 28,
+      "id": 28,
+      "project_id": 44,
+      "transaction_date": "2025-07-20",
+      "amount_zl": 720000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "PT50000201231234567890154",
+      "recipient_name": "Lisbon Digital SA",
+      "description": "Testy bezpieczeństwa"
+      
+    },
+    {
+      "table_id": 29,
+      "id": 29,
+      "project_id": 47,
+      "transaction_date": "2025-09-18",
+      "amount_zl": 340000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "ES9121000418450200051332",
+      "recipient_name": "Madrid Systems SL",
+      "description": "Maintenance i support"
+      
+    },
+    {
+      "table_id": 30,
+      "id": 30,
+      "project_id": 45,
+      "transaction_date": "2025-07-30",
+      "amount_zl": 950000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "GR1601101250000000012300695",
+      "recipient_name": "Athens Cloud Solutions",
+      "description": "Hosting dedykowany"
+      
+    },
+    {
+      "table_id": 31,
+      "id": 31,
+      "project_id": 43,
+      "transaction_date": "2025-08-22",
+      "amount_zl": 270000.00,
+      "transaction_type": "Przelew przychodzący",
+      "recipient_account": "PL61109010140000071219812874",
+      "recipient_name": "Budżet Miasta DemosKratos",
+      "description": "Płatność końcowa - częściowa"
+
+    },
+    {
+      "table_id": 32,
+      "id": 32,
+      "project_id": 42,
+      "transaction_date": "2025-07-05",
+      "amount_zl": 890000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "SI56263300012039086",
+      "recipient_name": "Ljubljana Tech doo",
+      "description": "Dokumentacja techniczna"
+      
+    },
+    {
+      "table_id": 33,
+      "id": 33,
+      "project_id": 46,
+      "transaction_date": "2025-10-02",
+      "amount_zl": 425000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "HR1210010051863000160",
+      "recipient_name": "Zagreb IT Consulting",
+      "description": "Migracja danych"
+      
+    },
+    {
+      "table_id": 34,
+      "id": 34,
+      "project_id": 41,
+      "transaction_date": "2025-08-15",
+      "amount_zl": 125000.00,
+      "transaction_type": "Przelew wewnętrzny",
+      "recipient_account": "PL27114010400000111122223333",
+      "recipient_name": "CorpTech - Konto operacyjne",
+      "description": "Koszty administracyjne"
+    },
+    {
+      "table_id": 35,
+      "id": 35,
+      "project_id": 45,
+      "transaction_date": "2025-09-12",
+      "amount_zl": 1200000.00,
+      "transaction_type": "Przelew wychodzący",
+      "recipient_account": "LI21088100002324013AA",
+      "recipient_name": "Liechtenstein Holdings",
+      "description": "Premium support package"
+      
+    }
+  ],
+  "employees": [
+    {
+      "table_id": 1,
+      "employee_id": 1,
+      "first_name": "Marcin",
+      "last_name": "Kowalski",
+      "position": "CEO",
+      "department": "Zarząd",
+      "monthly_salary_zl": 85000.00,
+      "hire_date": "2008-01-15",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 2,
+      "employee_id": 2,
+      "first_name": "Anna",
+      "last_name": "Kowalska",
+      "position": "CFO",
+      "department": "Finanse",
+      "monthly_salary_zl": 78000.00,
+      "hire_date": "2008-02-01",
+      "project_assignment": "Brak"
+    },
+    {
+      "table_id": 3,
+      "employee_id": 3,
+      "first_name": "Piotr",
+      "last_name": "Kowalski",
+      "position": "CTO",
+      "department": "IT",
+      "monthly_salary_zl": 72000.00,
+      "hire_date": "2010-06-15",
+      "project_assignment": "Brak"
+    },
+    {
+      "table_id": 4,
+      "employee_id": 4,
+      "first_name": "Katarzyna",
+      "last_name": "Nowak",
+      "position": "Dyrektor HR",
+      "department": "HR",
+      "monthly_salary_zl": 42000.00,
+      "hire_date": "2012-03-20",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 5,
+      "employee_id": 5,
+      "first_name": "Tomasz",
+      "last_name": "Wiśniewski",
+      "position": "Kierownik Projektu",
+      "department": "IT",
+      "monthly_salary_zl": 28000.00,
+      "hire_date": "2015-09-10",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 6,
+      "employee_id": 6,
+      "first_name": "Magdalena",
+      "last_name": "Kowalska-Lewandowska",
+      "position": "Główna Księgowa",
+      "department": "Finanse",
+      "monthly_salary_zl": 38000.00,
+      "hire_date": "2011-11-05",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 7,
+      "employee_id": 7,
+      "first_name": "Janusz",
+      "last_name": "Lewandowski",
+      "position": "Doradca Strategiczny",
+      "department": "Zarząd",
+      "monthly_salary_zl": 95000.00,
+      "hire_date": "2013-04-12",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 8,
+      "employee_id": 8,
+      "first_name": "Krzysztof",
+      "last_name": "Dąbrowski",
+      "position": "Senior Developer",
+      "department": "IT",
+      "monthly_salary_zl": 18000.00,
+      "hire_date": "2018-07-01",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 9,
+      "employee_id": 9,
+      "first_name": "Agnieszka",
+      "last_name": "Szymańska",
+      "position": "Project Manager",
+      "department": "IT",
+      "monthly_salary_zl": 22000.00,
+      "hire_date": "2019-02-14",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 10,
+      "employee_id": 10,
+      "first_name": "Robert",
+      "last_name": "Kowalski-Junior",
+      "position": "Wiceprezes",
+      "department": "Zarząd",
+      "monthly_salary_zl": 68000.00,
+      "hire_date": "2016-10-08",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 11,
+      "employee_id": 11,
+      "first_name": "Ewa",
+      "last_name": "Kaczmarek",
+      "position": "Specjalista ds. Zamówień",
+      "department": "Administracja",
+      "monthly_salary_zl": 15000.00,
+      "hire_date": "2017-05-22",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 12,
+      "employee_id": 12,
+      "first_name": "Marek",
+      "last_name": "Woźniak",
+      "position": "Konsultant Biznesowy",
+      "department": "Zarząd",
+      "monthly_salary_zl": 82000.00,
+      "hire_date": "2014-08-30",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 13,
+      "employee_id": 13,
+      "first_name": "Joanna",
+      "last_name": "Pawlak",
+      "position": "Developer",
+      "department": "IT",
+      "monthly_salary_zl": 16000.00,
+      "hire_date": "2020-01-15",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 14,
+      "employee_id": 14,
+      "first_name": "Andrzej",
+      "last_name": "Król",
+      "position": "Tester",
+      "department": "IT",
+      "monthly_salary_zl": 14000.00,
+      "hire_date": "2020-06-10",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 15,
+      "employee_id": 15,
+      "first_name": "Beata",
+      "last_name": "Nowak-Kowalska",
+      "position": "Dyrektor Marketingu",
+      "department": "Marketing",
+      "monthly_salary_zl": 45000.00,
+      "hire_date": "2015-12-01",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 16,
+      "employee_id": 16,
+      "first_name": "Grzegorz",
+      "last_name": "Adamczyk",
+      "position": "DevOps Engineer",
+      "department": "IT",
+      "monthly_salary_zl": 19000.00,
+      "hire_date": "2019-09-05",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 17,
+      "employee_id": 17,
+      "first_name": "Monika",
+      "last_name": "Zielińska",
+      "position": "Specjalista ds. Jakości",
+      "department": "IT",
+      "monthly_salary_zl": 17000.00,
+      "hire_date": "2021-03-18",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 18,
+      "employee_id": 18,
+      "first_name": "Paweł",
+      "last_name": "Kowalski-Trzeci",
+      "position": "Doradca Techniczny",
+      "department": "Zarząd",
+      "monthly_salary_zl": 88000.00,
+      "hire_date": "2017-07-22",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 19,
+      "employee_id": 19,
+      "first_name": "Aleksandra",
+      "last_name": "Michalska",
+      "position": "Asystentka Zarządu",
+      "department": "Administracja",
+      "monthly_salary_zl": 32000.00,
+      "hire_date": "2018-11-12",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 20,
+      "employee_id": 20,
+      "first_name": "Michał",
+      "last_name": "Wojciechowski",
+      "position": "Junior Developer",
+      "department": "IT",
+      "monthly_salary_zl": 12000.00,
+      "hire_date": "2021-08-01",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 21,
+      "employee_id": 21,
+      "first_name": "Zbigniew",
+      "last_name": "Kowalski-Senior",
+      "position": "Konsultant Merytoryczny",
+      "department": "Zarząd",
+      "monthly_salary_zl": 75000.00,
+      "hire_date": "2009-03-15",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 22,
+      "employee_id": 22,
+      "first_name": "Halina",
+      "last_name": "Kowalska-Senior",
+      "position": "Doradca ds. Etyki",
+      "department": "Zarząd",
+      "monthly_salary_zl": 65000.00,
+      "hire_date": "2010-05-20",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 23,
+      "employee_id": 23,
+      "first_name": "Łukasz",
+      "last_name": "Fikcyjny",
+      "position": "Senior Architect",
+      "department": "IT",
+      "monthly_salary_zl": 35000.00,
+      "hire_date": "2018-01-10",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 24,
+      "employee_id": 24,
+      "first_name": "Karolina",
+      "last_name": "Nieistniejąca",
+      "position": "Business Analyst",
+      "department": "IT",
+      "monthly_salary_zl": 28000.00,
+      "hire_date": "2019-04-15",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 25,
+      "employee_id": 25,
+      "first_name": "Sebastian",
+      "last_name": "Pozorny",
+      "position": "Security Expert",
+      "department": "IT",
+      "monthly_salary_zl": 32000.00,
+      "hire_date": "2020-02-20",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 26,
+      "employee_id": 26,
+      "first_name": "Natalia",
+      "last_name": "Widmo",
+      "position": "UX Designer",
+      "department": "IT",
+      "monthly_salary_zl": 24000.00,
+      "hire_date": "2021-06-08",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 27,
+      "employee_id": 27,
+      "first_name": "Kamil",
+      "last_name": "Duch",
+      "position": "Database Administrator",
+      "department": "IT",
+      "monthly_salary_zl": 29000.00,
+      "hire_date": "2019-11-25",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 28,
+      "employee_id": 28,
+      "first_name": "Weronika",
+      "last_name": "Iluzja",
+      "position": "Frontend Developer",
+      "department": "IT",
+      "monthly_salary_zl": 21000.00,
+      "hire_date": "2020-09-30",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 29,
+      "employee_id": 29,
+      "first_name": "Damian",
+      "last_name": "Fantom",
+      "position": "Backend Developer",
+      "department": "IT",
+      "monthly_salary_zl": 23000.00,
+      "hire_date": "2021-01-12",
+      "project_assignment": "Brak"
+
+    },
+    {
+      "table_id": 30,
+      "employee_id": 30,
+      "first_name": "Julia",
+      "last_name": "Chimera",
+      "position": "Scrum Master",
+      "department": "IT",
+      "monthly_salary_zl": 26000.00,
+      "hire_date": "2020-07-18",
+      "project_assignment": "Brak"
+
+    }
+  ],
+  "contracts": [
+    {
+      "table_id" : 4,
+      "contract_id": 1,
+      "contractor_name": "Consulting Partners Ltd",
+      "contract_value_zl": 1350000.00,
+      "contract_date": "2025-02-10",
+      "service_description": "Kompleksowe doradztwo techniczne i strategiczne",
+      "payment_completed_zl": 1130000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 2,
+      "contractor_name": "TechAdvice Cyprus",
+      "contract_value_zl": 1850000.00,
+      "contract_date": "2025-03-20",
+      "service_description": "Audyt bezpieczeństwa i penetration testing",
+      "payment_completed_zl": 1450000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 3,
+      "contractor_name": "Digital Solutions Malta",
+      "contract_value_zl": 680000.00,
+      "contract_date": "2025-05-08",
+      "service_description": "Zakup licencji oprogramowania enterprise",
+      "payment_completed_zl": 620000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 4,
+      "contractor_name": "CloudTech Luxembourg",
+      "contract_value_zl": 1420000.00,
+      "contract_date": "2025-04-15",
+      "service_description": "Usługi cloud computing i storage",
+      "payment_completed_zl": 980000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 5,
+      "contractor_name": "SwissTech Consulting AG",
+      "contract_value_zl": 4200000.00,
+      "contract_date": "2025-01-25",
+      "service_description": "Architektura systemów i doradztwo strategiczne",
+      "payment_completed_zl": 3550000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 6,
+      "contractor_name": "UK Tech Partners",
+      "contract_value_zl": 1150000.00,
+      "contract_date": "2025-06-10",
+      "service_description": "Szkolenia zespołu i transfer wiedzy",
+      "payment_completed_zl": 680000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 7,
+      "contractor_name": "BerlinTech GmbH",
+      "contract_value_zl": 890000.00,
+      "contract_date": "2025-07-05",
+      "service_description": "Wsparcie techniczne 24/7 i maintenance",
+      "payment_completed_zl": 420000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 8,
+      "contractor_name": "Sofia Digital Services",
+      "contract_value_zl": 1250000.00,
+      "contract_date": "2025-04-02",
+      "service_description": "Outsourcing zespołu developerskiego",
+      "payment_completed_zl": 920000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 9,
+      "contractor_name": "Liechtenstein Holdings",
+      "contract_value_zl": 3900000.00,
+      "contract_date": "2025-02-15",
+      "service_description": "Licencje enterprise i komponenty systemowe",
+      "payment_completed_zl": 3200000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 10,
+      "contractor_name": "Tallinn Tech OÜ",
+      "contract_value_zl": 485000.00,
+      "contract_date": "2025-05-28",
+      "service_description": "Testy penetracyjne i security audit",
+      "payment_completed_zl": 380000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 11,
+      "contractor_name": "Vienna IT Solutions",
+      "contract_value_zl": 920000.00,
+      "contract_date": "2025-07-18",
+      "service_description": "Integracja systemów legacy",
+      "payment_completed_zl": 510000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 12,
+      "contractor_name": "Amsterdam Cloud BV",
+      "contract_value_zl": 1580000.00,
+      "contract_date": "2025-05-05",
+      "service_description": "Infrastructure as a Service - hosting",
+      "payment_completed_zl": 1050000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 13,
+      "contractor_name": "Stockholm Systems AB",
+      "contract_value_zl": 720000.00,
+      "contract_date": "2025-07-28",
+      "service_description": "Monitoring systemów i alerting",
+      "payment_completed_zl": 340000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 14,
+      "contractor_name": "Monaco Tech Invest",
+      "contract_value_zl": 2850000.00,
+      "contract_date": "2025-04-20",
+      "service_description": "Dostawy sprzętu serwerowego premium",
+      "payment_completed_zl": 2450000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 15,
+      "contractor_name": "Dublin Digital Ltd",
+      "contract_value_zl": 420000.00,
+      "contract_date": "2025-03-28",
+      "service_description": "Marketing cyfrowy i SEO",
+      "payment_completed_zl": 420000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 16,
+      "contractor_name": "CloudTech Luxembourg",
+      "contract_value_zl": 1150000.00,
+      "contract_date": "2025-06-15",
+      "service_description": "Dodatkowa infrastruktura chmurowa",
+      "payment_completed_zl": 890000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 17,
+      "contractor_name": "Copenhagen Networks",
+      "contract_value_zl": 1080000.00,
+      "contract_date": "2025-08-05",
+      "service_description": "Sprzęt sieciowy Cisco premium",
+      "payment_completed_zl": 640000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 18,
+      "contractor_name": "Helsinki Security Oy",
+      "contract_value_zl": 380000.00,
+      "contract_date": "2025-08-22",
+      "service_description": "Certyfikaty SSL i zabezpieczenia",
+      "payment_completed_zl": 195000.00
+    },
+    {
+      "table_id" : 4,
+      "contract_id": 19,
+      "contractor_name": "SwissTech Consulting AG",
+      "contract_value_zl": 1680000.00,
+      "contract_date": "2025-05-25",
+      "service_description": "Projektowanie architektury mikrousług",
+      "payment_completed_zl": null
+    }
   ]
+
+
+
+
 }

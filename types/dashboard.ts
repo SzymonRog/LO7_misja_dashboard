@@ -80,6 +80,41 @@ interface EmailItem {
     encrypted: boolean
 }
 
+export interface TransactionItem {
+    table_id: number;
+    id: number;
+    project_id: number;
+    transaction_date: string;
+    amount_zl: number;
+    transaction_type: string;
+    recipient_account: string;
+    recipient_name: string;
+    description: string;
+}
+export interface EmployeeItem {
+    table_id: number;
+    employee_id: number;
+    first_name: string;
+    last_name: string;
+    position: string;
+    department: string;
+    monthly_salary_zl: number;
+    hire_date: string;
+    project_assignment: string;
+}
+export interface ContractItem {
+    table_id: number;
+    contract_id: number;
+    contractor_name: string;
+    contract_value_zl: number;
+    contract_date: string;
+    service_description: string;
+    payment_completed_zl: number;
+}
+
+
+
+
 export interface GrantItem {
     table_id: number;
     id: number;
@@ -128,6 +163,9 @@ export interface MockData {
     tenders: TenderItem[]
     grants: GrantItem[]
     companies: CompanyItem[]
+    corptech_transactions: TransactionItem[]
+    employees: EmployeeItem[]
+    contracts: ContractItem[]
 
 }
 

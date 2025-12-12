@@ -84,15 +84,12 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                                         initialNotifications={mockData.notifications}
                                     />
                                     <div className="fixed max-w-110 w-full bottom-0 right-4 ">
-                                        <Chat />
+
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-
-                        {/* Mobile Chat - floating CTA with drawer */}
-                        <MobileChat />
                     </SidebarProvider>
                 </V0Provider>
             </DashboardAuth>

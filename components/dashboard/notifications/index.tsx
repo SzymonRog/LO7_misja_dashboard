@@ -37,7 +37,7 @@ export default function Notifications({ initialNotifications }: NotificationsPro
             <CardHeader className="flex items-center justify-between pl-3 pr-1">
                 <CardTitle className="flex items-center gap-2.5 text-sm font-medium uppercase">
                     {unreadCount > 0 ? <Badge>{unreadCount}</Badge> : <Bullet />}
-                    Notifications
+                    Powiadomienia
                 </CardTitle>
             </CardHeader>
 
@@ -79,7 +79,7 @@ export default function Notifications({ initialNotifications }: NotificationsPro
                     {notifications.length === 0 && (
                         <div className="text-center py-8">
                             <p className="text-sm text-muted-foreground">
-                                No notifications
+                                Brak Powiadomień
                             </p>
                         </div>
                     )}
@@ -100,7 +100,7 @@ export default function Notifications({ initialNotifications }: NotificationsPro
                             onClick={() => setShowAll(!showAll)}
                             className="w-full"
                         >
-                            {showAll ? "Show Less" : `Show All (${notifications.length})`}
+                            {showAll ? "Show Less" : `Pokaż wszytskie (${notifications.length})`}
                         </Button>
                     </motion.div>
                 )}

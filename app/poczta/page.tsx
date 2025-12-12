@@ -405,32 +405,8 @@ function BookCipherTutorial({ open, onOpenChange }: { open: boolean; onOpenChang
                         </div>
                     </div>
 
-                    {/* Download Agenda */}
-                    <div className="space-y-2">
-                        <h3 className="font-semibold text-base">📥 Pobierz Agendę</h3>
-                        <div className="bg-amber-500/5 border border-amber-500/20 rounded-lg p-4">
-                            <div className="flex items-center justify-between">
-                                <div>
-                                    <div className="font-medium">Agenda Dobrego Obywatela DemosKratos</div>
-                                    <div className="text-xs text-muted-foreground">
-                                        Oficjalny dokument miasta (22 artykuły)
-                                    </div>
-                                </div>
-                                <Button variant="default" size="sm">
-                                    <a href="/agenda" target="_blank" rel="noreferrer">Przeczytaj Agendę</a>
-                                </Button>
-                            </div>
-                        </div>
-                        <div className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-3 text-xs">
-                            <div className="flex items-start gap-2">
-                                <FileTextIcon className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                                <div>
-                                    <strong className="text-blue-400">W kodzie:</strong> Użyj funkcji <code className="bg-accent px-1 rounded">get_emails(['id1', 'id2'])</code> aby pobrać zaszyfrowane emaile,
-                                    następnie odczytaj tokeny z pola <code className="bg-accent px-1 rounded">body</code> i odnajdź odpowiadające im słowa w agendzie.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
 
                     {/* Technical structure */}
                     <div className="space-y-2">
