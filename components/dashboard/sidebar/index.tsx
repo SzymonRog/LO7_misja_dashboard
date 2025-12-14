@@ -56,7 +56,7 @@ export function DashboardSidebar({ className, ...props }: React.ComponentProps<t
         ],
         user: {
             name: "ADMIN_USER",
-            email: "COMPTECH",
+            email: "CORPTECH",
             avatar: "/avatars/user_krimson.png",
         },
     };
@@ -72,7 +72,7 @@ export function DashboardSidebar({ className, ...props }: React.ComponentProps<t
                     <img src="/logo.svg" alt="logo" width={40} height={40} className="size-40"/>
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="text-2xl font-display">CompTech</span>
+                    <span className="text-2xl font-display">CorpTech</span>
                     <span className="text-xs uppercase">Głos demokracji i technologi</span>
                 </div>
             </SidebarHeader>

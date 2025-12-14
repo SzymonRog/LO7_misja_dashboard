@@ -35,7 +35,7 @@ const isV0 = process.env["VERCEL_URL"]?.includes("vusercontent.net") ?? false;
 export const metadata: Metadata = {
     title: {
         template: "%s – M.O.N.K.Y OS",
-        default: "TrueCorp",
+        default: "CorpTech",
     },
     description:
         "najlepsza firma przynosząca prawdę",
