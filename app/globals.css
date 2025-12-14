@@ -183,19 +183,19 @@ html, body {
 
 @media (max-width: 1027px) {
     html {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 }
 
 @media (min-width: 1028px) and (max-width: 1239px) {
     html {
-        font-size: 0.85em;
+        font-size: 0.9em;
     }
 }
 
 @media (min-width: 1240px) and (max-width: 1919px) {
     html {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 

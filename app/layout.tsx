@@ -62,7 +62,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         >
         <AuthProvider>
             <DashboardAuth>
-                <V0Provider isV0={isV0}>
+
                     <SidebarProvider>
                         {/* Mobile Header - only visible on mobile */}
                         <MobileHeader mockData={mockData} />
@@ -91,7 +91,6 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                             </div>
                         </div>
                     </SidebarProvider>
-                </V0Provider>
             </DashboardAuth>
         </AuthProvider>
         <Toaster />

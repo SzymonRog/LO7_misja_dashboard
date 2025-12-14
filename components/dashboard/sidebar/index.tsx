@@ -28,6 +28,7 @@ import CuteRobotIcon from "@/components/icons/cute-robot";
 import EmailIcon from "@/components/icons/email";
 import GearIcon from "@/components/icons/gear";
 import { useEffect, useState } from "react";
+import {User} from 'lucide-react';
 
 const ADMIN_UNLOCKED_KEY = "admin_unlocked";
 
@@ -139,12 +140,7 @@ export function DashboardSidebar({ className, ...props }: React.ComponentProps<t
                             <SidebarMenuItem>
                                 <CardContent className="flex gap-0.5 w-full group cursor-pointer">
                                     <div className="shrink-0 flex size-14 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground overflow-clip">
-                                        <Image
-                                            src={data.user.avatar}
-                                            alt={data.user.name}
-                                            width={120}
-                                            height={120}
-                                        />
+                                        <User className="size-10" />
                                     </div>
                                     <div className="pl-3 pr-1.5 pt-2 pb-1.5 flex-1 flex bg-sidebar-accent hover:bg-sidebar-accent-active/75 items-center rounded">
                                         <div className="grid flex-1 text-left text-sm leading-tight">

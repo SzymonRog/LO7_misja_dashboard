@@ -95,7 +95,7 @@ export default function SecurityPage() {
                         label="Sekcja Zabezpieczeń"
                         onUnlock={handleUnlock}
                         description="Ta sekcja wymaga uwierzytelnienia. Dostęp tylko dla autoryzowanego personelu."
-                        placeholder="Wprowadź klucz dostępu..."
+                        placeholder="Hmmm jaka liczba przychodzi ci do głowy??"
                         haveRules={false}
                     />
                 </div>
@@ -269,9 +269,9 @@ export default function SecurityPage() {
                 <div className="bg-card border border-border rounded-lg p-6 space-y-4">
                     <div className="text-center space-y-2">
                         <h3 className="text-xl font-bold flex items-center justify-center gap-2">
-                            <span>🐱</span>
+
                             <span>Twoja nagroda</span>
-                            <span>🐱</span>
+
                         </h3>
                         <p className="text-sm text-muted-foreground">
                             Za pomyślne ukończenie testu otrzymujesz dostęp do najbardziej strzeżonego zasobu w systemie...
