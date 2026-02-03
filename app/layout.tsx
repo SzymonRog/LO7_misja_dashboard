@@ -16,6 +16,7 @@ import { Toaster } from "@/components/ui/sonner"
 import SectionTransition from "@/components/section-transition";
 import {AuthProvider} from "@/components/contexts/AuthContext";
 import DashboardAuth from "@/components/auth/DashboardAuth";
+import { Analytics } from "@vercel/analytics/next";
 
 const mockData = mockDataJson as MockData;
 
@@ -94,6 +95,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
             </DashboardAuth>
         </AuthProvider>
         <Toaster />
+        <Analytics />
         </body>
         </html>
     );
